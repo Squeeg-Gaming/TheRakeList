@@ -99,7 +99,7 @@ export async function otherStats(list) {
     var timeDifference;
     var j;
     j = new Date();
-    timeDifference = Math.floor(((new Date() / 1000) - 1763410264) / 86400);
+    timeDifference = Math.floor(((new Date() / 1000) - 1758984420) / 86400);
     console.log(timeDifference);
     console.log(incGDR);
     document.getElementById("displayListLength").innerHTML = list.length;
