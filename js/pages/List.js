@@ -26,7 +26,6 @@ export default {
                 <table class="list" v-if="list">
                 <p v-if="ii = 0 == 12">you shouldn't see this</p>
                     <tr v-for="([level, err], i) in list">
-                    <template>
                                 <td class="rank">
                                     <p v-if="i + 1 <= 350" class="type-label-lg-big">#{{ i + 1}}</p>
                                     <p v-else class="type-label-lg">Legacy</p>
@@ -38,7 +37,6 @@ export default {
                                         <span class="type-label-sm">Verified by {{ level.verifier }}</span>
                                     </button>
                                 </td>
-                    </template>
                     </tr>
                 </table>
             </div>
