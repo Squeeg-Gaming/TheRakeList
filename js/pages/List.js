@@ -107,7 +107,7 @@ export default {
                         <p class="error" v-for="error of errors">{{ error }}</p>
                     </div>
                     <div class="og">
-                        <p class="type-label-md">Website layout made by <a href="https://tsl.pages.dev/" style="text-decoration: underline;" target="_blank">TheShittyList</a> and <a href="https://sgdlist.rf.gd/" style="text-decoration: underline;" target="_blank">moret</a>. <br> List equation stolen from <a href="https://list-calc.finite-weeb.xyz/" style="text-decoration: underline;" target="_blank">this peak website</a>.</p>
+                        <p class="type-label-md">Website layout made by <a href="https://tsl.pages.dev/" style="text-decoration: underline;" target="_blank">TheShittyList</a> and <a href="https://sgdlist.rf.gd/" style="text-decoration: underline;" target="_blank">more</a>. <br> List equation stolen from <a href="https://list-calc.finite-weeb.xyz/" style="text-decoration: underline;" target="_blank">this peak website</a>.</p>
                     </div>
                     <template v-if="editors">
                         <h2>List Moderators</h2>
