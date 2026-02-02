@@ -127,11 +127,11 @@ export function doStuff(levelName) {
 export function getEngineSelect() {
     console.log("juz pomnie,.");
     let params = new URLSearchParams(document.location.search); 
-    console.log(params.get("engine"));
-    if (params.get("engine") == "All") {
+    console.log(params.get("type"));
+    if (params.get("type") == "All") {
         return null;
     } else {
-        return params.get("engine");
+        return params.get("type");
     }
 }
 export function getSelectSelect(list) {
