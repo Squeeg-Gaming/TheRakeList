@@ -105,6 +105,22 @@ export default {
                     <button class="btn" @click="selected = Math.ceil(Math.random() * list.length)">
                     	<span class="type-label-lg">I'm feeling lucky</span>
 					</button>
+                    <h3>Filter levels:</h3>
+					<form action="#" class="type-label-lg">
+                    	<select class="btn" v-model="engineSelected" id="engine" name="engine">
+                        	<option class="type-label-lg" value="All" selected>Any</option>
+                            <option class="type-label-lg" value="Alternating">Alternating</option>
+                            <option class="type-label-lg" value="Jitter">Jitter</option>
+                            <option class="type-label-lg" value='["AltJitter", "Alterjitter", "Ludwig"]'>Alterjitter/Ludwig</option>
+                            <option class="type-label-lg" value="Rake">Rake</option>
+                            <option class="type-label-lg" value="K55">K55</option>
+							<option class="type-label-lg" value='["Scroll Clicking", "Geode Scrol"]'>Scroll Clicking</option>
+                        </select>
+                        <p>
+                        <br>
+					    <button class="btn" type="submit">Filter!</button>
+                        </p>
+					</form>
                     <a class="nav__icon" href="https://discord.gg/FkKeS9kvT4">
                         <img src="../assets/discord.svg" alt="Discord Logo" />
                     </a>
