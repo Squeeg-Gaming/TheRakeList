@@ -39,7 +39,7 @@ export default {
                                     </button>
                                 </td>
                     </template>
-                    <template v-else-if="level.engine.includes(level.password)">
+                    <template v-else-if="engineAsked.includes(level.password)">
                             <td class="rank">
                                 <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
                                 <p v-else class="type-label-lg">Legacy</p>
