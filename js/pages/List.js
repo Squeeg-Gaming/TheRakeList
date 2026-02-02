@@ -111,7 +111,7 @@ export default {
                         	<option class="type-label-lg" value="All" selected>Any</option>
                             <option class="type-label-lg" value="Alternating">Alternating</option>
                             <option class="type-label-lg" value="Jitter">Jitter</option>
-                            <option class="type-label-lg" value='["AltJitter", "Alterjitter", "Ludwig"]'>Alterjitter/Ludwig</option>
+                            <option class="type-label-lg" value='["Altjitter", "Alterjitter", "Ludwig"]'>Alterjitter/Ludwig</option>
                             <option class="type-label-lg" value="Rake">Rake</option>
                             <option class="type-label-lg" value="K55">K55</option>
 							<option class="type-label-lg" value='["Scroll Clicking", "Geode Scrol"]'>Scroll Clicking</option>
