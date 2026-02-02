@@ -26,6 +26,7 @@ export default {
                 <table class="list" v-if="list">
                 <p v-if="ii = 0 == 12">you shouldn't see this</p>
                     <tr v-for="([level, err], i) in list">
+                    <template v-if="engineAsked == null">
                                 <td class="rank">
                                     <p v-if="i + 1 <= 350" class="type-label-lg-big">#{{ i + 1}}</p>
                                     <p v-else class="type-label-lg">Legacy</p>
@@ -37,6 +38,19 @@ export default {
                                         <span class="type-label-sm">Verified by {{ level.verifier }}</span>
                                     </button>
                                 </td>
+                    </template>
+                    <template v-else-if="level.engine.split('/').includes(level.password)">
+                            <td class="rank">
+                                <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
+                                <p v-else class="type-label-lg">Legacy</p>
+                            </td>
+                            <td class="level" :class="{ 'active': selected == i, 'error': !level }">
+                                <button id="levelThumbnailReal" @click="selected = i" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em; " :style="getLevelThumbnail(i, list)">
+                                    <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
+                                                                            <span class="type-label-sm">Verified by {{ level.verifier }}</span>
+                                </button>
+                            </td>
+                    	</template>
                     </tr>
                 </table>
             </div>
