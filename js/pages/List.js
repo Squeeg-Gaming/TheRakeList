@@ -121,7 +121,7 @@ export default {
 					    <button class="btn" type="submit">Filter!</button>
                         </p>
 					</form>
-                    <a class="nav__icon" href="https://discord.gg/FkKeS9kvT4">
+                    <a class="nav__icon" href="https://discord.gg/d47pcnV7Fg">
                         <img src="../assets/discord.svg" alt="Discord Logo" />
                     </a>
                     <p>
