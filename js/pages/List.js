@@ -107,7 +107,7 @@ export default {
 					</button>
                     <h3>Filter levels:</h3>
 					<form action="#" class="type-label-lg">
-                    	<select class="btn" v-model="engineSelected" id="engine" name="engine">
+                    	<select class="btn" v-model="engineSelected" id="type" name="type">
                         	<option class="type-label-lg" value="All" selected>Any</option>
                             <option class="type-label-lg" value="Alternating">Alternating</option>
                             <option class="type-label-lg" value="Jitter">Jitter</option>
