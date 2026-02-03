@@ -24,12 +24,15 @@ export function score(rank, percent, minPercent) {
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
     */
     // New formula
-    let score = (-22.8*Math.pow(rank-1, 0.4) + 250) *
+    let score = (-32.8*Math.pow(rank-1, 0.4) + 250) *
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
-        score = Math.max(0, score);
+
+    score = Math.max(0, score);
+
     if (percent != 100) {
-    return round(score - score / 3);
+        return round(score - score / 3);
     }
+
     return Math.max(round(score), 0);
 }
 export function commonProgress(score, progress, requirement) {
