@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Geode Scroll/240FPS",
     "records": [
+                {
+            "user": "aelzfr",
+            "link": "https://youtu.be/RlCi-O1BKr4?si=BWzucHaG3H6YVkA_",
+            "hz": 240
+            "percent": 100
+        }
     ]
 }
