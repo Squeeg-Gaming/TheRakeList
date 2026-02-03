@@ -53,12 +53,6 @@ export default {
             <p class="type-body">
                 <span>{{ author }}</span>
             </p>
-			<template v-if="engine">
-    			<div class="type-title-sm">Engine</div>
-    			<p class="type-body">
-        			<span>{{ engine }}</span>
-    			</p>
-			</template>
 		</div>
     `,
 
