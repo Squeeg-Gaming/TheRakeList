@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Lip Spam/60FPS",
     "records": [
+                {
+            "user": "Dan",
+            "link": "https://www.youtube.com/watch?v=AWKIksavP20&feature=youtu.be",
+            "percent": 100,
+            "hz": 60
+        }
     ]
 }
