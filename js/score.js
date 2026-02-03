@@ -24,22 +24,12 @@ export function score(rank, percent, minPercent) {
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
     */
     // New formula
-		let score = 0;
-        if(56<=rank && rank<=150){
-			score=1.039035131 * ((185.7 * Math.exp(-0.02715 * rank)) + 14.84)
-		}else if(36<=rank && rank<=55){
-			score=1.0371139743 * ((212.61 * Math.pow(1.036,(1 - rank))) + 25.071)
-		}else if(21<=rank && rank<=35){
-			score=((250 - 83.389) * Math.pow(1.0099685,(2 - rank)) - 31.152) * 1.0371139743
-		}else if(4<=rank && rank<=20){
-			score=((326.1 * Math.exp(-0.0871 * rank)) + 51.09) * 1.037117142
-		}else if(1<=rank && rank<=3){
-			score=(-18.2899079915 * rank) + 368.2899079915
-        }else{
-            score=0;
-        }
-    if(percent !== 100){
-        score = commonProgress(score, percent, 67);
+    return Math.max(round(score), 0);
+    let score = (-22.8*Math.pow(rank-1, 0.4) + 250) *
+        ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
+        score = Math.max(0, score);
+    if (percent != 100) {
+    return round(score - score / 3);
     }
     return Math.max(round(score), 0);
 }
