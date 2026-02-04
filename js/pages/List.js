@@ -140,7 +140,7 @@ export default {
                             <option class="type-label-lg" value='["G502","G512","K55","K70"]'>Capped Devices</option>
 							<option class="type-label-lg" value='["Scroll Clicking", "Geode Scrol"]'>Scroll Clicking</option>
                         </select>
-                    	<input type="text" class="btn" v-model="engineSelected" id="fps" name="fps" placeholder="Enter FPS value">
+                    	<input type="text" class="btn" v-model="fpsSelected" id="fps" name="fps" placeholder="Enter FPS value">
                         <p>
                         <br>
 					    <button class="btn" type="submit">Filter!</button>
@@ -223,7 +223,7 @@ export default {
         engineAsked: getEngineSelect(),
         fpsAsked: getFpsSelect(),
         engineSelected: "All",
-        fpsSelected: "All",
+        fpsSelected: "",
 		grat: "../assets/levels/",
         ideae: ".webp",
         ii: 0,
