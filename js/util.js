@@ -134,6 +134,16 @@ export function getEngineSelect() {
         return params.get("method");
     }
 }
+export function getFpsSelect() {
+    console.log("work hello please");
+    let params = new URLSearchParams(document.location.search); 
+    console.log(params.get("fps"));
+    if (params.get("fps") == "All") {
+        return null;
+    } else {
+        return params.get("fps");
+    }
+}
 export function getSelectSelect(list) {
     console.log("Yayers");
     let params = new URLSearchParams(document.location.search); 
