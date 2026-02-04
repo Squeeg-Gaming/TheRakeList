@@ -139,7 +139,7 @@ export default {
                                 <option class="type-label-lg" value='["Altjitter","Alterjitter","Ludwig"]'>Alterjitter/Ludwig</option>
                                 <option class="type-label-lg" value="Rake">Rake</option>
                                 <option class="type-label-lg" value='["G502","G512","K55","K70"]'>Capped Devices</option>
-						    	<option class="type-label-lg" value='["Scroll Clicking", "Geode Scrol"]'>Scroll Clicking</option>
+                                <option class="type-label-lg" value='["Scroll Clicking","Geode Scroll","FlyHec","Lip Spam"]'>Others</option>
                             </select>
                     	    <input type="text" class="btn" v-model="fpsSelected" id="fps" name="fps" placeholder="Enter FPS value" autocomplete="off">
 					        <button class="btn" type="submit">Filter!</button>
