@@ -39,7 +39,7 @@ export default {
                                     </button>
                                 </td>
                     </template>
-                    <template v-else-if="level.password.split('/').map(s => s.trim()).some(pwd => fpsAsked.includes(pwd)) && fpsAsked != null && engineAsked == null">
+                    <template v-else-if="fpsAsked != null && level.password.split('/').map(s => s.trim()).some(pwd => fpsAsked.includes(pwd)) && engineAsked == null">
                             <td class="rank">
                                 <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
                                 <p v-else class="type-label-lg">Legacy</p>
@@ -51,7 +51,7 @@ export default {
                                 </button>
                             </td>
                     </template>
-                    <template v-else-if="level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && engineAsked != null && fpsAsked == null">
+                    <template v-else-if="engineAsked != null && level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && fpsAsked == null">
                             <td class="rank">
                                 <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
                                 <p v-else class="type-label-lg">Legacy</p>
@@ -63,7 +63,7 @@ export default {
                                 </button>
                             </td>
                     </template>
-                    <template v-else-if="level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && engineAsked != null && level.password.split('/').map(s => s.trim()).some(pwd => fpsAsked.includes(pwd)) && fpsAsked != null">
+                    <template v-else-if="fpsAsked != null && engineAsked != null && level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && engineAsked != null && level.password.split('/').map(s => s.trim()).some(pwd => fpsAsked.includes(pwd))">
                             <td class="rank">
                                 <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
                                 <p v-else class="type-label-lg">Legacy</p>
