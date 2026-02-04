@@ -39,7 +39,7 @@ export default {
                                     </button>
                                 </td>
                     </template>
-                    <template v-else-if="fpsAsked != null && level.password.split('/').map(s => s.trim().replace(/fps/i, '')).some(pwd => fpsAsked.includes(pwd)) && engineAsked == null">
+                    <template v-else-if="fpsAsked != null && level.password.split('/').map(s => s.trim().replace(/fps/i, '').toLowerCase()).some(pwd => fpsAsked.toLowerCase().includes(pwd)) && engineAsked == null">
                             <td class="rank">
                                 <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
                                 <p v-else class="type-label-lg">Legacy</p>
@@ -63,7 +63,7 @@ export default {
                                 </button>
                             </td>
                     </template>
-                    <template v-else-if="fpsAsked != null && engineAsked != null && level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && engineAsked != null && level.password.split('/').map(s => s.trim().replace(/fps/i, '')).some(pwd => fpsAsked.includes(pwd))">
+                    <template v-else-if="fpsAsked != null && engineAsked != null && level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && engineAsked != null && level.password.split('/').map(s => s.trim().replace(/fps/i, '').toLowerCase()).some(pwd => fpsAsked.toLowerCase().includes(pwd))">
                             <td class="rank">
                                 <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
                                 <p v-else class="type-label-lg">Legacy</p>
