@@ -1,5 +1,5 @@
 import { store } from "../main.js";
-import { embed, getEngineSelect, getSelectSelect, doStuff, incVisits, getYoutubeIdFromUrl, getLevelThumbnail } from "../util.js";
+import { embed, getEngineSelect, getSelectSelect, doStuff, incVisits, getYoutubeIdFromUrl, getLevelThumbnail, getFpsSelect } from "../util.js";
 import { score } from "../score.js";
 import { fetchEditors, fetchList } from "../content.js";
 
