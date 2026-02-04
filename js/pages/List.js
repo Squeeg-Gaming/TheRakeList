@@ -142,11 +142,8 @@ export default {
 						    	<option class="type-label-lg" value='["Scroll Clicking", "Geode Scrol"]'>Scroll Clicking</option>
                             </select>
                     	    <input type="text" class="btn" v-model="fpsSelected" id="fps" name="fps" placeholder="Enter FPS value" autocomplete="off">
+					        <button class="btn" type="submit">Filter!</button>
                         </div>
-                        <p>
-                        <br>
-					    <button class="btn" type="submit">Filter!</button>
-                        </p>
 					</form>
                     <a class="nav__icon" href="https://discord.gg/d47pcnV7Fg">
                         <img src="../assets/discord.svg" alt="Discord Logo" />
