@@ -131,6 +131,7 @@ export default {
 					</button>
                     <h3>Filter levels:</h3>
 					<form action="#" class="type-label-lg">
+                        <div style="display: flex; align-items: center; gap: 10px;"
                     	<select class="btn" v-model="engineSelected" id="method" name="method">
                         	<option class="type-label-lg" value="All" selected>Any</option>
                             <option class="type-label-lg" value="Alternating">Alternating</option>
@@ -140,8 +141,8 @@ export default {
                             <option class="type-label-lg" value='["G502","G512","K55","K70"]'>Capped Devices</option>
 							<option class="type-label-lg" value='["Scroll Clicking", "Geode Scrol"]'>Scroll Clicking</option>
                         </select>
-                        <p> </p>
                     	<input type="text" class="btn" v-model="fpsSelected" id="fps" name="fps" placeholder="Enter FPS value" autocomplete="off">
+                        </div>
                         <p>
                         <br>
 					    <button class="btn" type="submit">Filter!</button>
