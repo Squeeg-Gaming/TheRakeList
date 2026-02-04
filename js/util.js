@@ -138,7 +138,7 @@ export function getFpsSelect() {
     console.log("work hello please");
     let params = new URLSearchParams(document.location.search); 
     console.log(params.get("fps"));
-    if (params.get("fps") == "All") {
+    if (params.get("fps") == "") {
         return null;
     } else {
         return params.get("fps");
