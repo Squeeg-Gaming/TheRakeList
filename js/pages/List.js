@@ -140,6 +140,7 @@ export default {
                             <option class="type-label-lg" value='["G502","G512","K55","K70"]'>Capped Devices</option>
 							<option class="type-label-lg" value='["Scroll Clicking", "Geode Scrol"]'>Scroll Clicking</option>
                         </select>
+                        <br>
                     	<input type="text" class="btn" v-model="fpsSelected" id="fps" name="fps" placeholder="Enter FPS value" autocomplete="off">
                         <p>
                         <br>
