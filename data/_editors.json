@@ -33,5 +33,10 @@
         "role": "dev",
         "name": "ball",
         "link": "https://www.youtube.com/@BallGoBalling"
+    },
+    {
+        "role": "dev",
+        "name": "SnailMusic",
+        "link": "https://dlol.neocities.org/"
     }
 ]
