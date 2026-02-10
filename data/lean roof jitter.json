@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Jitter/64FPS",
     "records": [
+        {
+        "user": "LightningGD",
+        "link": "https://www.youtube.com/watch?v=PclzgE6W-hA",
+            "hz": "60",
+            "percent": 100
+        }      
     ]
 }
