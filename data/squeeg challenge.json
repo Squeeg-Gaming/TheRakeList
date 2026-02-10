@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Alternating/CBF",
     "records": [
+        {
+        "user": "Sandwich",
+        "link": "https://medal.tv/games/geometry-dash/clips/m4vXNmrb5V38KKH0q?invite=cr-MSxvSWIsNDcyMzE5NTg3&v=11",
+            "hz": "CBF",
+            "percent": 100
+        }      
     ]
 }
