@@ -9,10 +9,23 @@
     "password": "Ludwig/Altjitter/CBF",
     "records": [
         {
+            "user": "F1erzza",
+            "link": "https://youtu.be/x_pnfo5EUDA",
+            "percent": 100,
+            "hz": 240
+        },
+        {
             "user": "Squeeg",
             "link": "https://www.youtube.com/watch?v=M8zfyTPHazI",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "LightningGD",
+            "link": "https://www.youtube.com/watch?v=75mVNls-Ja0",
+            "percent": 100,
+            "hz": 240
         }
+        
     ]
 }
