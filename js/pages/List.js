@@ -133,7 +133,7 @@ export default {
 					<form action="#" class="type-label-lg">
                         <div style="display: flex; align-items: center; gap: 10px;">
                     	    <select class="btn" v-model="engineSelected" id="method" name="method">
-                        	    <option class="type-label-lg" value="All" selected>Any</option>
+                        	    <option class="type-label-lg" value="All" selected>Any Method</option>
                                 <option class="type-label-lg" value="Alternating">Alternating</option>
                                 <option class="type-label-lg" value="Jitter">Jitter</option>
                                 <option class="type-label-lg" value='["Altjitter","Alterjitter","Ludwig"]'>Alterjitter/Ludwig</option>
