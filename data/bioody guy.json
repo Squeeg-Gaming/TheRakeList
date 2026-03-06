@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Alternating/60FPS/240FPS/CBF",
     "records": [
+                             {
+        "user": "AngoPR",
+        "link": "https://youtu.be/abUJv2nFhHk?si=FTFM_K0CpEbqeWHz",
+        "hz": "https://youtu.be/abUJv2nFhHk?si=FTFM_K0CpEbqeWHz",
+        "percent": 100
+        }
     ]
 }
