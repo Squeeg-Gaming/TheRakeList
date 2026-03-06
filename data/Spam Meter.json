@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Alternating/Jitter/CBF",
     "records": [
+                {
+            "user": "AngoPR",
+            "link": "https://youtu.be/ztFfOy5i6M0?si=jPo9I1gKAjT-BB4D",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
