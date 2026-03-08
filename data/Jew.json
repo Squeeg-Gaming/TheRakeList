@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Alternating/Jitter/CBF",
     "records": [
+                        {
+        "user": "zher14",
+        "link": "https://youtu.be/bxTjwmf2kbw?si=m_gdVQiXbjJ8Mo3_",
+        "hz": "CBF",
+        "percent": 100
+        }
     ]
 }
