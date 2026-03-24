@@ -6,7 +6,13 @@
     "verifier": "Delgado_yeet_404",
     "verification": "https://youtu.be/xhbnMxADaSU",
     "percentToQualify": 100,
-    "password": "Altjitter/Ludwig/CBF/No RT",
+    "password": "Altjitter/Ludwig/CBF",
     "records": [
+                                {
+            "user": "AngoPR",
+            "link": "https://youtu.be/J1czZtoKbpc?si=JIeVDavJRkdsW_BQ",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
