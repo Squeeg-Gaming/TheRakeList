@@ -8,5 +8,11 @@
 "percentToQualify": 100,
 "password": "Altjitter/Ludwig/CBF",
 "records": [
+                                           {
+            "user": "AngoPR",
+            "link": "https://youtu.be/0zfTVTrhaZg?si=M6nelQ21JkGrl7iv",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
