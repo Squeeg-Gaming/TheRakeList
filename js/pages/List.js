@@ -40,7 +40,7 @@ export default {
                                     </button>
                                 </td>
                     </template>
-                    <template v-else-if="fpsAsked != null && level.password.split('/').map(s => s.trim().replace(/fps/i, '').toLowerCase()).some(pwd => pwd === fpsAsked.toLowerCase()) && engineAsked == null">
+                    <template v-else-if="fpsAsked != null && item.level.password.split('/').map(s => s.trim().replace(/fps/i, '').toLowerCase()).some(pwd => pwd === fpsAsked.toLowerCase()) && engineAsked == null">
                             <td class="rank">
                                     <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
                                     <p v-else class="type-label-lg">Legacy</p>
@@ -52,7 +52,7 @@ export default {
                                 </button>
                             </td>
                     </template>
-                    <template v-else-if="engineAsked != null && level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && fpsAsked == null">
+                    <template v-else-if="engineAsked != null && item.level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && fpsAsked == null">
                             <td class="rank">
                                     <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
                                     <p v-else class="type-label-lg">Legacy</p>
@@ -64,7 +64,7 @@ export default {
                                 </button>
                             </td>
                     </template>
-                    <template v-else-if="fpsAsked != null && engineAsked != null && level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && engineAsked != null && level.password.split('/').map(s => s.trim().replace(/fps/i, '').toLowerCase()).some(pwd === fpsAsked.toLowerCase())">
+                    <template v-else-if="fpsAsked != null && engineAsked != null && item.level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && engineAsked != null && item.level.password.split('/').map(s => s.trim().replace(/fps/i, '').toLowerCase()).some(pwd === fpsAsked.toLowerCase())">
                             <td class="rank">
                                     <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
                                     <p v-else class="type-label-lg">Legacy</p>
