@@ -47,15 +47,12 @@ export default {
                         <template v-if="entry.verified.length > 0 || entry.completed.length > 0 || entry">
                         <h3>{{ entry.total }} - Hardest: {{ [...entry.verified, ...entry.completed].reduce((min, current) =>current.rank < min.rank ? current : min).level }}</h3>
                         </template>
-                        <template v-if="entry.created.length > 0">
+                         <template v-if="entry.created.length > 0">
                         <h2>Created ({{ entry.created.length}})</h2>
                         <table class="table" style="display: grid; gap: 6px;">
                             <tr v-for="score in entry.created">
                                 <td class="rank" style="text-align: end;">
                                     <p>#{{ score.rank }}</p>
-                                </td>
-                                <td class="total" style="display: inline-flex; align-items: center; padding: 2rem;">
-                                    <p class="type-label-lg">{{ localize(entry.total) }}</p> 
                                 </td>
                                 <td class="level" style="border-radius: 10px; margin: 1px; padding-left: 18px; height: 48px;" :style="getLevelThumbnail(score.rank - 1, list)">
                                     <a class="type-label-lg" style="border-collapse: collapse; border-spacing: 0rem;" target="_blank" :href="score.link">{{ score.level }}</a>
