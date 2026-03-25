@@ -69,6 +69,18 @@ export async function fetchSwagger() {
         return null;
     }
 }
+export async function fetchWhichLeaderboard() {
+    let params = new URLSearchParams(document.location.search); 
+    if (!params.get("type")) {
+        return await fetchLeaderboard();
+    }
+    let whichLeaderboard = params.get("type").toLowerCase() || "h";
+    if (whichLeaderboard == 'creator') {
+        return await fetchCreatorLeaderboard();
+    } else {
+        return await fetchLeaderboard();
+    }
+}
 
 export async function fetchLeaderboard() {
     const list = await fetchList();
