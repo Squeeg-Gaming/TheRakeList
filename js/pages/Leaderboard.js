@@ -1,5 +1,5 @@
-import { fetchWhichLeaderboard, fetchList } from '../content.js';
-import { localize, mamaMia, getLevelThumbnail, getEngineSelect } from '../util.js';
+import { fetchWhichLeaderboard, fetchList, fetchScratchIds } from '../content.js';
+import { localize, mamaMia, getLevelThumbnail, getEngineSelect, getScratchPFP } from '../util.js';
 
 import Spinner from '../components/Spinner.js';
 
