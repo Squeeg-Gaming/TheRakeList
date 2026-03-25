@@ -50,7 +50,7 @@ export default {
                             <h3>{{ entry.total }} - Hardest: {{ [...entry.verified, ...entry.completed].reduce((min, current) =>current.rank < min.rank ? current : min).level }}</h3>
                         </template>
                         <template v-if="entry.created.length > 0">
-                        <h2>Created ({{ entry.created.length}})</h2>
+                        <h2>Created ({{ entry.created.length }})</h2>
                         <table class="table" style="display: grid; gap: 6px;">
                             <tr v-for="score in entry.created">
                                 <td class="rank" style="text-align: end;">
@@ -63,7 +63,7 @@ export default {
                         </table>
                         </template>
                         <template v-if="entry.verified.length > 0">
-                            <h2>Verified ({{ entry.verified.length}})</h2>
+                            <h2>Verified ({{ entry.verified.length }})</h2>
                             <table class="table" style="display: grid; gap: 6px;">
                                 <tr v-for="score in entry.verified">
                                     <td class="rank" style="text-align: end;">
