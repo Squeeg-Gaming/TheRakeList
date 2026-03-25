@@ -115,7 +115,7 @@ export default {
                                 <option class="type-label-lg" value='["Scroll Clicking","Geode Scroll","FlyHec","Lip Spam"]'>Others</option>
                             </select>
                     	    <input type="text" class="btn" v-model="fpsSelected" id="fps" name="fps" placeholder="Enter FPS value" autocomplete="off">
-					        <button class="btn" type="submit">Filter!</button>
+					        <button class="btn" type="button" @click="applyFilters()">Filter!</button>
                         </div>
 					</form>
                     <a class="nav__icon" href="https://discord.gg/d47pcnV7Fg">
@@ -365,6 +365,16 @@ export default {
         this.loading = false;
     },
     methods: {
+    applyFilters() {
+        this.engineAsked = this.engineSelected;
+        this.fpsAsked = this.fpsSelected.trim() || null;
+        try {
+            const parsed = JSON.parse(this.engineAsked);
+            if (Array.isArray(parsed)) this.engineAsked = parsed;
+        } catch (e) {
+        }
+    }
+},
         embed,
         score,
         getLevelThumbnail,
