@@ -33,7 +33,7 @@ export default {
                             </td> 
                             <td class="user" :class="{ 'active': selected == i }">
                                 <button @click="selected = i">
-                                    <div style="display: inline-flex; align-items: center; gap: 20px;">
+                                    <div style="align-items: center; gap: 20px;">
                                         <span style="display: inline-block;" class="type-label-lg">{{ ientry.user }}</span>
                                     </div>
                                 </button>
