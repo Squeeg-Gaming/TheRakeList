@@ -289,7 +289,7 @@ export default {
     }
 
     return filtered;
-}
+},
 		originalPacksWithIndex() {
             console.error(this.packs);
             return this.packs;
