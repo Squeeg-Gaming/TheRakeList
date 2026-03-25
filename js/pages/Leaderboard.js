@@ -126,10 +126,26 @@ export default {
         const [leaderboard, err] = await fetchWhichLeaderboard();
         this.list = await fetchList();
         this.leaderboard = leaderboard;
+        this.scratchIds = await fetchScratchIds();
         let players = [];
         let pfps = [];
         for (let index = 0; index < leaderboard.length; index++) {
             players.push(this.leaderboard[index].user);
+        }
+        for (let index = 0; index < players.length; index++) {
+            let findUsername = this.scratchIds.findIndex((username) => username == players[index]);
+            if (findUsername == -1) {
+                console.error(`${players[index]} hasn't been added to the Scratch ID's file yet!`);
+                const res = await fetch(`https://cors.gays3xlol.workers.dev/https://api.scratch.mit.edu/users/${encodeURIComponent(players[index])}`);
+                const obj = await res.json();
+                if (obj.profile) {
+                    pfps.push(`https://uploads.scratch.mit.edu/get_image/user/${obj.id}_90x90.png`);
+                } else {
+                    pfps.push("https://uploads.scratch.mit.edu/get_image/user/1_90x90.png");
+                } 
+            } else {  
+                pfps.push(`https://uploads.scratch.mit.edu/get_image/user/${this.scratchIds[findUsername + 1]}_90x90.png`);
+            }
         }
         this.pfps = pfps;
         this.err = err;
@@ -139,5 +155,6 @@ export default {
     methods: {
         localize,
         getLevelThumbnail,
+        getScratchPFP,
     },
 };
