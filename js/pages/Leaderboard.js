@@ -31,13 +31,16 @@ export default {
                             <td class="rank">
                                 <p class="type-label-lg">#{{ i + 1 }}</p>
                             </td> 
-                            <td class="total">
-                                <p class="type-label-lg">{{ localize(ientry.total) }}</p> 
+                            <td class="total" style="display: inline-flex; align-items: center; padding: 2rem;">
+                                <p v-if="whichLeaderboard == 'creator'" class="type-label-lg">{{ ientry.total }}</p> 
+                                <p v-else class="type-label-lg">{{ localize(ientry.total) }}</p> 
+                                <img v-if="whichLeaderboard == 'creator'" src="../assets/hammer.png" height="24">
                             </td>
                             <td class="user" :class="{ 'active': selected == i }">
                                 <button @click="selected = i">
-                                    <!-- ta strona jest zjebana -->
-                                    <span style="display: inline-block;" class="type-label-lg"> {{ ientry.user }}</span>
+                                    <div style="display: inline-flex; align-items: center; gap: 20px;">
+                                        <span style="display: inline-block;" class="type-label-lg">{{ ientry.user }}</span>
+                                    </div>
                                 </button>
                             </td>
                         </tr>
@@ -45,12 +48,12 @@ export default {
                 </div>
                 <div class="player-container" style="border-collapse: separate;">
                     <div class="player" style="border-collapse: separate;">
-                        <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
+                        <h1 style="display: inline-flex; align-items: center;">#{{ selected + 1 }} - {{ entry.user }}</h1> 
                         <template v-if="entry.verified.length > 0 || entry.completed.length > 0">
-                            <h3>{{ entry.total }} - Hardest: {{ [...entry.verified, ...entry.completed].reduce((min, current) =>current.rank < min.rank ? current : min).level }}</h3>
+                        <h3>{{ entry.total }} - Hardest: {{ [...entry.verified, ...entry.completed].reduce((min, current) =>current.rank < min.rank ? current : min).level }}</h3>
                         </template>
                         <template v-if="entry.created.length > 0">
-                        <h2>Created ({{ entry.created.length }})</h2>
+                        <h2>Created ({{ entry.created.length}})</h2>
                         <table class="table" style="display: grid; gap: 6px;">
                             <tr v-for="score in entry.created">
                                 <td class="rank" style="text-align: end;">
@@ -63,7 +66,7 @@ export default {
                         </table>
                         </template>
                         <template v-if="entry.verified.length > 0">
-                            <h2>Verified ({{ entry.verified.length }})</h2>
+                            <h2>Verified ({{ entry.verified.length}})</h2>
                             <table class="table" style="display: grid; gap: 6px;">
                                 <tr v-for="score in entry.verified">
                                     <td class="rank" style="text-align: end;">
@@ -111,6 +114,7 @@ export default {
     `,
     computed: {
         entry() {
+			console.error(this.leaderboard);
             return this.leaderboard[this.selected];
         },
     },
@@ -124,6 +128,12 @@ export default {
         const [leaderboard, err] = await fetchWhichLeaderboard();
         this.list = await fetchList();
         this.leaderboard = leaderboard;
+        let players = [];
+        let pfps = [];
+        for (let index = 0; index < leaderboard.length; index++) {
+            players.push(this.leaderboard[index].user);
+        }
+        this.pfps = pfps;
         this.err = err;
         // Hide loading spinner
         this.loading = false;
