@@ -3,8 +3,8 @@
     column-gap: 2rem;
 }
 .nav .nav__tab {
-    padding-top: 4px;
-    border-bottom: 4px solid transparent;
+    padding-top: 1px;
+    border-bottom: 1px solid transparent;
     display: flex;
     align-items: center;
     padding-inline: 0.5rem;
