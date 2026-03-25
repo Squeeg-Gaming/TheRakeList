@@ -189,3 +189,9 @@ export function shuffle(array) {
 export function getThumbnailImage(lvlName) {
     return `../assets/levels/${encodeURIComponent(lvlName)}.png`;
 }
+export function listLevelNameFilter() {
+	if (!document.getElementById("filterForLevelName") == null)
+		document.getElementById("filterForLevelName").addEventListener("keyup", () => {
+        console.log(`Name: ${document.getElementById("filterForLevelName").value}`);
+    });
+}
