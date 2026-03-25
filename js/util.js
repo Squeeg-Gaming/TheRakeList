@@ -10,17 +10,20 @@ export function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 export function getScratchPFP(username) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-           // Typical action to be performed when the document is ready:
-           console.log(xhttp.responseText);
-        }
-    };
-    xhttp.open("GET", `https://api.scratch.mit.edu/users/${encodeURIComponent(username)}`, true);
-    xhttp.setRequestHeader("Access-Control-Allow-Origin", "*")
-    xhttp.send();
+    return "https://uploads.scratch.mit.edu/get_image/user/111315218_90x90.png?v=";
+    let b = getAPI(username);
+    b.then(hsdkjhwsfkjwh => { return hsdkjhwsfkjwh })
 }
+async function getAPI(username) {
+	    const res = await fetch(`https://cors.gays3xlol.workers.dev/https://api.scratch.mit.edu/users/${encodeURIComponent(username)}`);
+        const obj = await res.json();
+        const objParsed = JSON.parse(JSON.stringify(obj));
+        if (objParsed.profile) {
+            return `https://uploads.scratch.mit.edu/get_image/user/${objParsed.profile.id}_90x90.png`;
+        } else {
+            return "https://uploads.scratch.mit.edu/get_image/user/1_90x90.png"
+        }
+    }
 export function getLevelThumbnail(levelPos, list) {
             if (list == undefined || levelPos == undefined) {
             	return 0;
@@ -59,11 +62,18 @@ function setUpThumbnailStyle(levelName) {
     			if (levelName == "getting kicked out of train") {
                     return `background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)), url(https://www.amtrak.com/content/dam/projects/dotcom/english/public/images/heros/couple-cafe-window-view.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;`
                 } else {
-                return `background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)), url("https://therakelist.pages.dev/assets/levels/${encodeURIComponent(levelName)}.png"); background-size: cover; background-repeat: no-repeat; background-position: center;`
+                return `background-image: var(--level-button), url(${getThumbnailImage(levelName, "yea")}); background-size: cover; background-repeat: no-repeat; background-position: center;`
 				}
             }
+export function getThumbnailImage(lvlName) {
+    return `../assets/levels/${encodeURIComponent(lvlName)}.png`;
+}
 export function embed(video) {
-        return `https://www.youtube.com/embed/${getYoutubeIdFromUrl(video)}`;
+    	if(video.includes("medal.tv")) {
+            return video;
+        } else {
+        	return `https://www.youtube.com/embed/${getYoutubeIdFromUrl(video)}?rel=0`;
+        }
 }
 export function mamaMia(swaggers) {
      console.log("../assets/" + swaggers + ".svg");
@@ -93,13 +103,14 @@ export async function incVisits() {
 }
 var incGDR = 0;
 export async function otherStats(list) {
+    incGDR = 0;
     for (let i = 0; i < list.length; i++) {
   		console.log(list[i].find(isGDR));
 	}
     var timeDifference;
     var j;
     j = new Date();
-    timeDifference = Math.floor(((new Date() / 1000) - 1758984420) / 86400);
+    timeDifference = Math.floor(((new Date() / 1000) - 1763410264) / 86400);
     console.log(timeDifference);
     console.log(incGDR);
     document.getElementById("displayListLength").innerHTML = list.length;
@@ -127,21 +138,11 @@ export function doStuff(levelName) {
 export function getEngineSelect() {
     console.log("juz pomnie,.");
     let params = new URLSearchParams(document.location.search); 
-    console.log(params.get("method"));
-    if (params.get("method") == "All") {
+    console.log(params.get("engine"));
+    if (params.get("engine") == "All") {
         return null;
     } else {
-        return params.get("method");
-    }
-}
-export function getFpsSelect() {
-    console.log("work hello please");
-    let params = new URLSearchParams(document.location.search); 
-    console.log(params.get("fps"));
-    if (params.get("fps") == "") {
-        return null;
-    } else {
-        return params.get("fps");
+        return params.get("engine");
     }
 }
 export function getSelectSelect(list) {
@@ -166,7 +167,18 @@ export function selectRandomLevel(levels) {
 export function getThumbnailFromId(id) {
     return `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
 }
-
+export function listLevelNameFilter() {
+	if (!document.getElementById("filterForLevelName") == null)
+		document.getElementById("filterForLevelName").addEventListener("keyup", () => {
+        console.log(`Name: ${document.getElementById("filterForLevelName").value}`);
+    });
+}
+export function listPlayerFilter() {
+	if (!document.getElementById("filterForPlayerlName") == null)
+		document.getElementById("filterForPlayerName").addEventListener("keyup", () => {
+        console.log(`Name: ${document.getElementById("filterForPlayerName").value}`);
+    });
+}
 // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 export function shuffle(array) {
     let currentIndex = array.length, randomIndex;
@@ -186,12 +198,13 @@ export function shuffle(array) {
 
     return array;
 }
-export function getThumbnailImage(lvlName) {
-    return `../assets/levels/${encodeURIComponent(lvlName)}.png`;
-}
-export function listLevelNameFilter() {
-	if (!document.getElementById("filterForLevelName") == null)
-		document.getElementById("filterForLevelName").addEventListener("keyup", () => {
-        console.log(`Name: ${document.getElementById("filterForLevelName").value}`);
-    });
+export function getFpsSelect() {
+    console.log("work hello please");
+    let params = new URLSearchParams(document.location.search); 
+    console.log(params.get("fps"));
+    if (params.get("fps") == "") {
+        return null;
+    } else {
+        return params.get("fps");
+    }
 }
