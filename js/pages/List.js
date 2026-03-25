@@ -17,10 +17,10 @@ const roleIconMap = {
 export default {
     components: { Spinner, LevelAuthors },
     template: `
-        <main v-if="loading" :style="level?.name ? { background: 'var(--color-background-list)' } : {}">
+        <main v-if="loading">
             <Spinner></Spinner>
         </main>
-        <main v-else class="page-list" :style="level?.name ? { background: 'var(--color-background-list)' } : {}">
+        <main v-else class="page-list">
             <div class="list-container">
 		<div style="display: grid;">
 			<input v-model="searchQuery" placeholder="Input text to Filter! here..." class="btn" type="text" id="filterForLevelName"/>
