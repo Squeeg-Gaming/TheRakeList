@@ -29,7 +29,7 @@ export default {
                     <tr v-for="(item, i) in filteredListDisplay" :key="item.originalIndex">
                         <template v-if="engineAsked == null && fpsAsked == null">
                                 <td class="rank">
-                                    <p v-if="i + 1 <= 350" class="type-label-lg-big">#{{ i + 1}}</p>
+                                    <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
                                     <p v-else class="type-label-lg">Legacy</p>
                                 </td>
                                 <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
@@ -42,9 +42,9 @@ export default {
                     </template>
                     <template v-else-if="fpsAsked != null && level.password.split('/').map(s => s.trim().replace(/fps/i, '').toLowerCase()).some(pwd => pwd === fpsAsked.toLowerCase()) && engineAsked == null">
                             <td class="rank">
-                                <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
-                                <p v-else class="type-label-lg">Legacy</p>
-                            </td>
+                                    <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
+                                    <p v-else class="type-label-lg">Legacy</p>
+                                </td>
                             <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                 <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                     <span class="type-label-lg">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
@@ -54,9 +54,9 @@ export default {
                     </template>
                     <template v-else-if="engineAsked != null && level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && fpsAsked == null">
                             <td class="rank">
-                                <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
-                                <p v-else class="type-label-lg">Legacy</p>
-                            </td>
+                                    <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
+                                    <p v-else class="type-label-lg">Legacy</p>
+                                </td>
                             <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                 <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                     <span class="type-label-lg">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
@@ -66,9 +66,9 @@ export default {
                     </template>
                     <template v-else-if="fpsAsked != null && engineAsked != null && level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && engineAsked != null && level.password.split('/').map(s => s.trim().replace(/fps/i, '').toLowerCase()).some(pwd === fpsAsked.toLowerCase())">
                             <td class="rank">
-                                <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
-                                <p v-else class="type-label-lg">Legacy</p>
-                            </td>
+                                    <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
+                                    <p v-else class="type-label-lg">Legacy</p>
+                                </td>
                             <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                 <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                     <span class="type-label-lg">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
