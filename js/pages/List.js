@@ -380,5 +380,5 @@ export default {
         getLevelThumbnail,
         getThumbnailImage,
         listLevelNameFilter,
-    },
+    }
 };
