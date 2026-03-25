@@ -1,11 +1,10 @@
 import { store } from "../main.js";
-import { embed, getEngineSelect, getSelectSelect, doStuff, incVisits, getYoutubeIdFromUrl, getLevelThumbnail, getFpsSelect } from "../util.js";
+import { embed, getEngineSelect, getSelectSelect, doStuff, getThumbnailImage, incVisits, getYoutubeIdFromUrl, getLevelThumbnail, listLevelNameFilter, getFpsSelect } from "../util.js";
 import { score } from "../score.js";
-import { fetchEditors, fetchList } from "../content.js";
+import { fetchEditors, fetchList, fetchPacks } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
 import LevelAuthors from "../components/List/LevelAuthors.js";
-import levelThumbnail from "../components/List/LevelThumbnail.js";
 
 const roleIconMap = {
     owner: "crown",
@@ -18,15 +17,17 @@ const roleIconMap = {
 export default {
     components: { Spinner, LevelAuthors },
     template: `
-        <main v-if="loading">
+        <main v-if="loading" :style="level?.name ? { background: 'var(--color-background-list)' } : {}">
             <Spinner></Spinner>
         </main>
-        <main v-else class="page-list">
+        <main v-else class="page-list" :style="level?.name ? { background: 'var(--color-background-list)' } : {}">
             <div class="list-container">
-                <table class="list" v-if="list">
-                <p v-if="ii = 0 == 12">you shouldn't see this</p>
-                    <tr v-for="([level, err], i) in list">
-                    <template v-if="engineAsked == null && fpsAsked == null">
+		<div style="display: grid;">
+			<input v-model="searchQuery" placeholder="Input text to Filter! here..." class="btn" type="text" id="filterForLevelName"/>
+		</div>
+                <table class="list" v-if="list && list.length">
+                    <tr v-for="(item, i) in filteredListDisplay" :key="item.originalIndex">
+                        <template v-if="engineAsked == null && fpsAsked == null">
                                 <td class="rank">
                                     <p v-if="i + 1 <= 350" class="type-label-lg-big">#{{ i + 1}}</p>
                                     <p v-else class="type-label-lg">Legacy</p>
@@ -77,13 +78,23 @@ export default {
                     </template>
                     </tr>
                 </table>
+                <p v-if="list && list.length > 0 && filteredListDisplay && filteredListDisplay.length === 0" class="type-body-lg">
+					<br>
+                    No levels found matching your search.
+                </p>
             </div>
             <div class="level-container">
+			<a v-if="level" @click="selected = null">back</a>
                 <div class="level" v-if="level">
-                    <h1>{{ level.name }}</h1>
+					<div style="display: flex; flex-direction: column; gap: 1rem; width: 100%; justify-self: center;">
+                    <div class="button-holder" style="gap: 1em; ">
+                        <h1>{{ level.name }}</h1>
+                    </div>
+                    <h1 style="border-bottom: 1px solid #808080;padding-bottom: 8px;"></h1>
 					<p class="desc" v-if="level.description" v-html="level.description"></p>
+					</div>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier" :engine="level.engine"></LevelAuthors>
-                    <iframe class="video" allow="fullscreen" id="videoframe" :src="video" frameborder="0"></iframe>
+                    <iframe class="video" id="videoframe" :src="video" frameborder="0" allowfullscreen scrolling="no" allow="encrypted-media *; fullscreen *;" style="border-radius: 1rem;"></iframe>
                     <ul class="stats">
                         <li>
                             <div class="type-title-sm">Points when completed</div>
@@ -98,7 +109,7 @@ export default {
                             <p>{{ level.password || 'Free to Copy' }}</p>
                         </li>
                     </ul>
-                    <h2>Records</h2>
+                    <h2>Records ({{ level.records.length }})</h2>
                     <p v-if="selected + 1 <= 200"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
                     <p v-else-if="selected +1 <= 350"><strong>100%</strong> or better to qualify</p>
                     <p v-else>This level does not accept new records.</p>
@@ -123,13 +134,13 @@ export default {
                     </table>
                 </div>
                     <div v-else-if="selected == null" class="level" style="height: 100%; display: flex; justify-content: center; align-items: center; text-align: center;">
-                    <h3>Welcome to the Spam Challenge List!</h3>
+                    <h2>Welcome to the Spam Challenge List!</h2>
                     <p>Click the levels on the left side to see information about them!</p>
                     <p>For more information about the submission rules check the right side!</p>
                     <button class="btn" @click="selected = Math.ceil(Math.random() * list.length)">
                     	<span class="type-label-lg">I'm feeling lucky</span>
 					</button>
-                    <h3>Filter levels:</h3>
+                    <h2>Filter levels:</h2>
 					<form action="#" class="type-label-lg">
                         <div style="display: flex; align-items: center; gap: 10px;">
                     	    <select class="btn" v-model="engineSelected" id="method" name="method">
@@ -153,6 +164,21 @@ export default {
                         	join our discord please
                         </a>
                     </p>
+					<h2>Changelog</h2>
+
+			<!-- new guide -->
+
+			<!-- add level: <p class="cl">- <clw>name</clw> has been placed at <clw>#</clw>, above <clw>name</clw> and below <clw>name</clw></p> -->
+			<!-- raise level: <p class="cl">- <clw>name</clw> has been raised from <clw>#</clw> to <clw>#</clw>, above <clw>name</clw> and below <clw>name</clw></p> -->
+			<!-- lower level: <p class="cl">- <clw>name</clw> has been lowered from <clw>#</clw> to <clw>#</clw>, above <clw>name</clw> and below <clw>name</clw></p> -->
+			<!-- swap levels: <p class="cl">- <clw>name</clw> and <clw>name</clw> have been swapped, with <clw>name</clw> now sitting above at <clw>#</clw></p> -->
+			<!-- delete level: <p class="cl">- <clw>name</clw> have been removed</p> --> 
+
+                    <main style="display: flex; flex-direction: column; align-items: left; gap: 24px; text-align: left; overflow: hidden; overflow-y: auto; max-height: 300px; width: 700px; border: 3px solid var(--color-primary); border-radius: 5px;">
+            			<div style="display: flex; flex-direction: column; align-items: left; gap: 24px; overflow: visible; margin-left: 10px; margin-top: 12px">
+							<p class="cl">nothing here yet...</p>
+				</div>
+        			</main>
                 </div>
             </div>
             <div class="meta-container">
@@ -161,8 +187,8 @@ export default {
                         <p class="error" v-for="error of errors">{{ error }}</p>
                     </div>
                     <div class="og">
-                        <p class="type-label-md">Website layout made by <a href="https://tsl.pages.dev/" style="text-decoration: underline;" target="_blank">TheShittyList</a> and <a href="https://sgdlist.rf.gd/" style="text-decoration: underline;" target="_blank">SGD Level List</a>. <br> List equation stolen from <a href="https://list-calc.finite-weeb.xyz/" style="text-decoration: underline;" target="_blank">this peak website</a>.</p>
-                    </div>
+                        <p class="type-label-md">Website layout made by <a href="https://tsl.pages.dev" style="text-decoration: underline;" target="_blank">TheShittyList</a> and <a href="https://sgdlist.pages.dev/" style="text-decoration: underline;" target="_blank">SGD Level List</a>. <br> UI inspired by <a href="https://aredl.net" style="text-decoration: underline;" target="_blank">The All Rated Extreme Demons List</a>. <br> Points equation stolen from <a href="https://list-calc.finite-weeb.xyz" style="text-decoration: underline;" target="_blank">this peak website</a> and <a href="https://www.pointercrate.com" style="text-decoration: underline;" target="_blank">Pointercrate</a>.</p>
+		    </div>
                     <template v-if="editors">
                         <h2>List Moderators</h2>
                         <ol class="editors">
@@ -174,10 +200,10 @@ export default {
                         </ol>
                     </template>
                     <h2>Submission Requirements</h2>
-                    <h3>
+                    <h3 style="font-weight: 550;">
                         Record submission:
                     </h3>
-		    <p>
+                    <p>
                         - Achieved the record without using hacks, CBF and physics bypass are allowed.
                     </p>
                     <p>
@@ -198,7 +224,7 @@ export default {
                     <p>
                         - Players with mod menus installed MUST have cheat indicator enabled.
                     </p>
-                    <h3>
+                    <h3 style="font-weight: 550;">
                         Level requirement:
                     </h3>
                     <p>
@@ -224,13 +250,14 @@ export default {
         engineSelected: "All",
         fpsSelected: "",
 		grat: "../assets/levels/",
-        ideae: ".webp",
+        fileFormat: "h",
+        levelSearch: null,
+        searchQuery: '',
         ii: 0,
         blt: 0,
         errors: [],
         roleIconMap,
         store,
-        visits: incVisits()
     }),
     computed: {
         level() {
@@ -239,6 +266,25 @@ export default {
             } else {
                 return this.list[this.selected][0];
             }
+        },
+        originalListWithIndex() {
+            return (this.list || []).map(([level, err], index) => ({
+                level,
+                err,
+                originalIndex: index,
+            }));
+        },
+        filteredListDisplay() {
+            if (!this.searchQuery.trim()) {
+                return this.originalListWithIndex;
+            }
+            const searchTerm = this.searchQuery.toLowerCase();
+            console.warn((this.originalListWithIndex || []).filter(item => item.level?.name?.toLowerCase().includes(searchTerm.toLowerCase())));
+            return (this.originalListWithIndex || []).filter(item => item.level?.name?.toLowerCase().includes(searchTerm.toLowerCase()));
+		},
+		originalPacksWithIndex() {
+            console.error(this.packs);
+            return this.packs;
         },
         video() {
             if (!this.level.showcase) {
@@ -252,10 +298,25 @@ export default {
             );
         },
     },
+    watch: {
+        filteredListDisplay: {
+            handler(newList) {
+                if (newList.length > 0) {
+                    const currentSelectionInNewList = newList.find(item => item.originalIndex === this.selected);
+                    if (!currentSelectionInNewList) {
+                        this.selected = newList[0].originalIndex;
+                    }
+                } else {
+                    this.selected = null;
+                }
+            },
+        },
+    },
     async mounted() {
         // Hide loading spinner
         this.list = await fetchList();
         this.editors = await fetchEditors();
+		this.packs = await fetchPacks();
         this.selected = await getSelectSelect(this.list);
 
         // Error handling
@@ -282,5 +343,8 @@ export default {
         embed,
         score,
         getLevelThumbnail,
+        getThumbnailImage,
+        listLevelNameFilter,
     },
 };
+
