@@ -46,44 +46,64 @@ export default {
                 <div class="player-container" style="border-collapse: separate;">
                     <div class="player" style="border-collapse: separate;">
                         <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
-                        <h3>{{ entry.total }}</h3>
-                        <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
+                        <template v-if="entry.verified.length > 0 || entry.completed.length > 0">
+                            <h3>{{ entry.total }} - Hardest: {{ [...entry.verified, ...entry.completed].reduce((min, current) =>current.rank < min.rank ? current : min).level }}</h3>
+                        </template>
+                        <template v-if="entry.created.length > 0">
+                        <h2>Created ({{ entry.created.length}})</h2>
                         <table class="table" style="display: grid; gap: 6px;">
-                            <tr v-for="score in entry.verified">
+                            <tr v-for="score in entry.created">
                                 <td class="rank" style="text-align: end;">
                                     <p>#{{ score.rank }}</p>
                                 </td>
-                                <td class="level" style="border-radius: 10px; margin: 1px; padding-left: 18px;" :style="getLevelThumbnail(score.rank - 1, list)">
+                                <td class="level" style="border-radius: 10px; margin: 1px; padding-left: 18px; height: 48px;" :style="getLevelThumbnail(score.rank - 1, list)">
                                     <a class="type-label-lg" style="border-collapse: collapse; border-spacing: 0rem;" target="_blank" :href="score.link">{{ score.level }}</a>
-                                    <span class="type-label-sm">+{{ localize(score.score) }}</span>
                                 </td>
                             </tr>
                         </table>
-                        <h2 v-if="entry.completed.length > 0">Completed ({{ entry.completed.length }})</h2>
-                        <table class="table" style="display: grid; gap: 6px;">
-                            <tr v-for="score in entry.completed">
-                                <td class="rank">
-                                    <p>#{{ score.rank }}</p>
-                                </td>
-                                <td class="level" style="border-radius: 10px; margin: 1px; padding-left: 18px;" :style="getLevelThumbnail(score.rank - 1, list)">
-                                    <a class="type-label-lg" style="border-collapse: collapse; border-spacing: 0rem" target="_blank" :href="score.link">{{ score.level }}</a>
-                                    <span class="type-label-sm">+{{ localize(score.score) }}</span>
-                                </td>
-                            </tr>
-                        </table>
-                       
-                        <h2 v-if="entry.progressed.length > 0">Progressed ({{entry.progressed.length}})</h2>
-                        <table class="table" style="display: grid; gap: 6px;">
-                            <tr v-for="score in entry.progressed">
-                                <td class="rank">
-                                    <p>#{{ score.rank }}</p>
-                                </td>
-                                <td class="level" style="border-radius: 10px; margin: 1px; padding-left: 18px;" :style="getLevelThumbnail(score.rank - 1, list)">
-                                    <a class="type-label-lg" target="_blank" style="border-collapse: collapse; border-spacing: 0rem;" :href="score.link">{{ score.percent }}% - {{ score.level }}</a>
-									<span class="type-label-sm">+{{ localize(score.score) }}</span>
-                                </td>
-                            </tr>
-                        </table>
+                        </template>
+                        <template v-if="entry.verified.length > 0">
+                            <h2>Verified ({{ entry.verified.length}})</h2>
+                            <table class="table" style="display: grid; gap: 6px;">
+                                <tr v-for="score in entry.verified">
+                                    <td class="rank" style="text-align: end;">
+                                        <p>#{{ score.rank }}</p>
+                                    </td>
+                                    <td class="level" style="border-radius: 10px; margin: 1px; padding-left: 18px; height: 48px;" :style="getLevelThumbnail(score.rank - 1, list)">
+                                        <a class="type-label-lg" style="border-collapse: collapse; border-spacing: 0rem;" target="_blank" :href="score.link">{{ score.level }}</a>
+                                        <span class="type-label-sm">+{{ localize(score.score) }}</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </template>
+                        <template v-if="entry.completed.length > 0">
+                            <h2 v-if="entry.completed.length > 0">Completed ({{ entry.completed.length }})</h2>
+                            <table class="table" style="display: grid; gap: 6px;">
+                                <tr v-for="score in entry.completed">
+                                    <td class="rank">
+                                        <p>#{{ score.rank }}</p>
+                                    </td>
+                                    <td class="level" style="border-radius: 10px; margin: 1px; padding-left: 18px; height: 48px;" :style="getLevelThumbnail(score.rank - 1, list)">
+                                        <a class="type-label-lg" style="border-collapse: collapse; border-spacing: 0rem" target="_blank" :href="score.link">{{ score.level }}</a>
+                                        <span class="type-label-sm">+{{ localize(score.score) }}</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </template>
+                        <template v-if="entry.progressed.length > 0">
+                        <h2>Progressed ({{entry.progressed.length}})</h2>
+                            <table class="table" style="display: grid; gap: 6px;">
+                                <tr v-for="score in entry.progressed">
+                                    <td class="rank">
+                                        <p>#{{ score.rank }}</p>
+                                    </td>
+                                    <td class="level" style="border-radius: 10px; margin: 1px; padding-left: 18px; height: 48px;" :style="getLevelThumbnail(score.rank - 1, list)">
+                                        <a class="type-label-lg" target="_blank" style="border-collapse: collapse; border-spacing: 0rem;" :href="score.link">{{ score.percent }}% - {{ score.level }}</a>
+                                        <span class="type-label-sm">+{{ localize(score.score) }}</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </template>
                     </div>
                 </div>
             </div>
