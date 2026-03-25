@@ -31,11 +31,6 @@ export default {
                             <td class="rank">
                                 <p class="type-label-lg">#{{ i + 1 }}</p>
                             </td> 
-                            <td class="total" style="display: inline-flex; align-items: center; padding: 2rem;">
-                                <p v-if="whichLeaderboard == 'creator'" class="type-label-lg">{{ ientry.total }}</p> 
-                                <p v-else class="type-label-lg">{{ localize(ientry.total) }}</p> 
-                                <img v-if="whichLeaderboard == 'creator'" src="../assets/hammer.png" height="24">
-                            </td>
                             <td class="user" :class="{ 'active': selected == i }">
                                 <button @click="selected = i">
                                     <div style="display: inline-flex; align-items: center; gap: 20px;">
