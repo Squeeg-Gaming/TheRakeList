@@ -27,7 +27,6 @@ export default {
 		</div>
                 <table class="list" v-if="list && list.length">
                     <tr v-for="(item, i) in filteredListDisplay" :key="item.originalIndex">
-                        <template v-if="engineAsked == null && fpsAsked == null">
                                 <td class="rank">
                                     <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
                                     <p v-else class="type-label-lg">Legacy</p>
@@ -39,43 +38,6 @@ export default {
                                         <span class="type-label-sm">Verified by {{ item.level.verifier }}</span>
                                     </button>
                                 </td>
-                    </template>
-                    <template v-else-if="fpsAsked != null && item.level.password.split('/').map(s => s.trim().replace(/fps/i, '').toLowerCase()).some(pwd => pwd === fpsAsked.toLowerCase()) && engineAsked == null">
-                            <td class="rank">
-                                    <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
-                                    <p v-else class="type-label-lg">Legacy</p>
-                                </td>
-                            <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
-                                <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
-                                    <span class="type-label-lg">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
-                                    <span class="type-label-sm">Verified by {{ item.level.verifier }}</span>
-                                </button>
-                            </td>
-                    </template>
-                    <template v-else-if="engineAsked != null && item.level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && fpsAsked == null">
-                            <td class="rank">
-                                    <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
-                                    <p v-else class="type-label-lg">Legacy</p>
-                                </td>
-                            <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
-                                <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
-                                    <span class="type-label-lg">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
-                                    <span class="type-label-sm">Verified by {{ item.level.verifier }}</span>
-                                </button>
-                            </td>
-                    </template>
-                    <template v-else-if="fpsAsked != null && engineAsked != null && item.level.password.split('/').map(s => s.trim()).some(pwd => engineAsked.includes(pwd)) && item.level.password.split('/').map(s => s.trim().replace(/fps/i, '').toLowerCase()).some(pwd => pwd === fpsAsked.toLowerCase())">
-                            <td class="rank">
-                                    <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
-                                    <p v-else class="type-label-lg">Legacy</p>
-                                </td>
-                            <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
-                                <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
-                                    <span class="type-label-lg">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
-                                    <span class="type-label-sm">Verified by {{ item.level.verifier }}</span>
-                                </button>
-                            </td>
-                    </template>
                     </tr>
                 </table>
                 <p v-if="list && list.length > 0 && filteredListDisplay && filteredListDisplay.length === 0" class="type-body-lg">
@@ -300,13 +262,34 @@ export default {
             }));
         },
         filteredListDisplay() {
-            if (!this.searchQuery.trim()) {
-                return this.originalListWithIndex;
-            }
-            const searchTerm = this.searchQuery.toLowerCase();
-            console.warn((this.originalListWithIndex || []).filter(item => item.level?.name?.toLowerCase().includes(searchTerm.toLowerCase())));
-            return (this.originalListWithIndex || []).filter(item => item.level?.name?.toLowerCase().includes(searchTerm.toLowerCase()));
-		},
+    let filtered = this.originalListWithIndex;
+    if (this.searchQuery.trim()) {
+        const searchTerm = this.searchQuery.toLowerCase();
+        filtered = filtered.filter(item => 
+            item.level?.name?.toLowerCase().includes(searchTerm)
+        );
+    }
+    if (this.engineAsked && this.engineAsked !== "All") {
+        const engineFilter = Array.isArray(this.engineAsked) ? this.engineAsked : [this.engineAsked];
+        filtered = filtered.filter(item =>
+            (item.level?.password || '')
+                .split('/')
+                .map(s => s.trim())
+                .some(pwd => engineFilter.includes(pwd))
+        );
+    }
+    if (this.fpsAsked && this.fpsAsked.trim() !== "") {
+        const fpsLower = this.fpsAsked.toLowerCase();
+        filtered = filtered.filter(item =>
+            (item.level?.password || '')
+                .split('/')
+                .map(s => s.trim().replace(/fps/i, '').toLowerCase())
+                .some(pwd => pwd === fpsLower)
+        );
+    }
+
+    return filtered;
+}
 		originalPacksWithIndex() {
             console.error(this.packs);
             return this.packs;
