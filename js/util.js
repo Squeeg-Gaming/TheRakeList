@@ -189,10 +189,3 @@ export function shuffle(array) {
 export function getThumbnailImage(lvlName) {
     return `../assets/levels/${encodeURIComponent(lvlName)}.png`;
 }
-export function embed(video) {
-    	if(video.includes("medal.tv")) {
-            return video;
-        } else {
-        	return `https://www.youtube.com/embed/${getYoutubeIdFromUrl(video)}?rel=0`;
-        }
-}
