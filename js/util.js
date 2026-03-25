@@ -62,7 +62,7 @@ function setUpThumbnailStyle(levelName) {
     			if (levelName == "getting kicked out of train") {
                     return `background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)), url(https://www.amtrak.com/content/dam/projects/dotcom/english/public/images/heros/couple-cafe-window-view.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;`
                 } else {
-                return `background-image: var(--level-button), url(${getThumbnailImage(levelName, "yea")}); background-size: cover; background-repeat: no-repeat; background-position: center;`
+                return `background-image: var(--level-button), url("${getThumbnailImage(levelName, "yea")}"); background-size: cover; background-repeat: no-repeat; background-position: center;`
 				}
             }
 export function getThumbnailImage(lvlName) {
