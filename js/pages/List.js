@@ -32,11 +32,11 @@ export default {
                                     <p v-if="i + 1 <= 350" class="type-label-lg-big">#{{ i + 1}}</p>
                                     <p v-else class="type-label-lg">Legacy</p>
                                 </td>
-                                <td class="level" :class="{ 'active': selected == i, 'error': !level }">
+                                <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                     <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                         <span class="type-label-lg
-                                        ">{{ level?.name || \`Error (\${err}.json)\` }}</span>
-                                        <span class="type-label-sm">Verified by {{ level.verifier }}</span>
+                                        ">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
+                                        <span class="type-label-sm">Verified by {{ item.level.verifier }}</span>
                                     </button>
                                 </td>
                     </template>
@@ -45,10 +45,10 @@ export default {
                                 <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
                                 <p v-else class="type-label-lg">Legacy</p>
                             </td>
-                            <td class="level" :class="{ 'active': selected == i, 'error': !level }">
+                            <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                 <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
-                                    <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
-                                                                            <span class="type-label-sm">Verified by {{ level.verifier }}</span>
+                                    <span class="type-label-lg">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
+                                    <span class="type-label-sm">Verified by {{ item.level.verifier }}</span>
                                 </button>
                             </td>
                     </template>
@@ -57,10 +57,10 @@ export default {
                                 <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
                                 <p v-else class="type-label-lg">Legacy</p>
                             </td>
-                            <td class="level" :class="{ 'active': selected == i, 'error': !level }">
+                            <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                 <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
-                                    <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
-                                                                            <span class="type-label-sm">Verified by {{ level.verifier }}</span>
+                                    <span class="type-label-lg">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
+                                    <span class="type-label-sm">Verified by {{ item.level.verifier }}</span>
                                 </button>
                             </td>
                     </template>
@@ -69,10 +69,10 @@ export default {
                                 <p v-if="i + 1 <= 350" class="type-label-lg">#{{ ii = ii + 1 }} (#{{ i + 1 }})</p>
                                 <p v-else class="type-label-lg">Legacy</p>
                             </td>
-                            <td class="level" :class="{ 'active': selected == i, 'error': !level }">
+                            <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                 <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
-                                    <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
-                                                                            <span class="type-label-sm">Verified by {{ level.verifier }}</span>
+                                    <span class="type-label-lg">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
+                                    <span class="type-label-sm">Verified by {{ item.level.verifier }}</span>
                                 </button>
                             </td>
                     </template>
