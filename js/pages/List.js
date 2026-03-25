@@ -373,12 +373,11 @@ export default {
             if (Array.isArray(parsed)) this.engineAsked = parsed;
         } catch (e) {
         }
-    }
-},
+    },
         embed,
         score,
         getLevelThumbnail,
         getThumbnailImage,
         listLevelNameFilter,
-    }
+    },
 };
