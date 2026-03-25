@@ -44,7 +44,7 @@ export default {
                 <div class="player-container" style="border-collapse: separate;">
                     <div class="player" style="border-collapse: separate;">
                         <h1 style="display: inline-flex; align-items: center;">#{{ selected + 1 }} - {{ entry.user }}</h1> 
-                        <template v-if="entry.verified.length > 0 || entry.completed.length > 0">
+                        <template v-if="entry.verified.length > 0 || entry.completed.length > 0 || entry">
                         <h3>{{ entry.total }} - Hardest: {{ [...entry.verified, ...entry.completed].reduce((min, current) =>current.rank < min.rank ? current : min).level }}</h3>
                         </template>
                         <template v-if="entry.created.length > 0">
