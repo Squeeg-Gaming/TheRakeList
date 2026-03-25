@@ -115,7 +115,13 @@ export default {
         },
     },
     async mounted() {
-        const [leaderboard, err] = await fetchLeaderboard();
+        let params = new URLSearchParams(document.location.search); 
+        if (!params.get("type")) {
+            this.whichLeaderboard = "Player";
+        } else {
+            this.whichLeaderboard = params.get("type").toLowerCase();
+        }
+        const [leaderboard, err] = await fetchWhichLeaderboard();
         this.list = await fetchList();
         this.leaderboard = leaderboard;
         this.err = err;
