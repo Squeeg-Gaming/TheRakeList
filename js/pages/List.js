@@ -246,11 +246,10 @@ export default {
         loading: true,
         selected: null,
         engineAsked: getEngineSelect(),
-        fpsAsked: getFpsSelect(),
         engineSelected: "All",
-        fpsSelected: "",
 		grat: "../assets/levels/",
         fileFormat: "h",
+        sdhfkjsdbhfkjs: "assets/levels/B R A I N S P A C E.png",
         levelSearch: null,
         searchQuery: '',
         ii: 0,
@@ -260,6 +259,30 @@ export default {
         store,
     }),
     computed: {
+        getDemonDifficulty() {
+            if (this.selected == null) {
+            	return 0;
+            } else {
+                if (this.list[this.selected][0].demonDifficulty == "Iraq Demon") {
+                    this.fileFormat = '.svg';
+                } else {
+                    this.fileFormat = '.png';
+                }
+                if (this.list[this.selected][0].demonDifficulty == "PETA Demon") {
+                    return "https://www.peta.org/wp-content/themes/peta/src/assets/images/svgs/peta-logo.svg";
+                } else if (this.list[this.selected][0].demonDifficulty == "Poopy Demon") {
+                    return "https://raw.githubusercontent.com/twitter/twemoji/a6f943b958d94b2b82f886aa540b915d9a694a75/assets/svg/1f4a9.svg";
+                } else if (this.list[this.selected][0].demonDifficulty == "love Demon") {
+                    return "https://upload.wikimedia.org/wikipedia/commons/c/c8/Twemoji15.0.2_1fa77.svg";
+                } else if (this.list[this.selected][0].demonDifficulty == "Top 14 Very Hard Timing Map Very Demon") {
+                    return "https://media.tenor.com/ejuK2N9toPMAAAAe/gd-geometry-dash.png";
+                } else if (this.list[this.selected][0].name == "Lucid Dreaming") {
+                    return "https://upload.wikimedia.org/wikipedia/commons/7/72/Twemoji_1f634.svg";
+                }
+                // Playstation Vita credit: https://image.ceneostatic.pl/data/products/13107195/i-sony-playstation-vita-wifi.jpg can we even use this legally idk don't sue
+                return encodeURI(`assets/difficulties/${this.list[this.selected][0].demonDifficulty}${this.fileFormat}`);
+            }
+        },
         level() {
             if (this.selected == null) {
             	return 0;
@@ -288,6 +311,23 @@ export default {
         },
         video() {
             if (!this.level.showcase) {
+				console.warn("! Level Names:");
+				for (let i = 0; i < this.list.length; i++) {
+                    console.warn(this.list[i][0].name);
+                }
+				console.warn("! Level Info:");
+				for (let i = 0; i < this.list.length; i++) {
+                    console.warn(this.list[i][0].name + "⓪" + this.list[i][0].verifier + "⓪" + this.list[i][0].author + "⓪" + this.list[i][0].engine + "⓪");
+                }
+				console.warn("! Level URL's:");
+                for (let i = 0; i < this.list.length; i++) {
+                    console.warn(this.list[i][0].id + "⓪" + this.list[i][0].itchLink + "⓪" + this.list[i][0].itchLink2 + "⓪");
+                }
+				console.warn("! Level Videos:");
+                for (let i = 0; i < this.list.length; i++) {
+                    console.warn(getYoutubeIdFromUrl(this.list[i][0].verification));
+                }
+				
                 return embed(this.level.verification);
             }
 
@@ -347,4 +387,3 @@ export default {
         listLevelNameFilter,
     },
 };
-
