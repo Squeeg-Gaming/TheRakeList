@@ -33,7 +33,7 @@ export default {
                                     <p v-else class="type-label-lg">Legacy</p>
                                 </td>
                                 <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                                    <button id="levelThumbnailReal" @click="selected = i" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em; " :style="getLevelThumbnail(i, list)">
+                                    <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                         <span class="type-label-lg
                                         ">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                                         <span class="type-label-sm">Verified by {{ level.verifier }}</span>
@@ -46,7 +46,7 @@ export default {
                                 <p v-else class="type-label-lg">Legacy</p>
                             </td>
                             <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                                <button id="levelThumbnailReal" @click="selected = i" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em; " :style="getLevelThumbnail(i, list)">
+                                <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                     <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                                                                             <span class="type-label-sm">Verified by {{ level.verifier }}</span>
                                 </button>
@@ -58,7 +58,7 @@ export default {
                                 <p v-else class="type-label-lg">Legacy</p>
                             </td>
                             <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                                <button id="levelThumbnailReal" @click="selected = i" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em; " :style="getLevelThumbnail(i, list)">
+                                <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                     <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                                                                             <span class="type-label-sm">Verified by {{ level.verifier }}</span>
                                 </button>
@@ -70,7 +70,7 @@ export default {
                                 <p v-else class="type-label-lg">Legacy</p>
                             </td>
                             <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                                <button id="levelThumbnailReal" @click="selected = i" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em; " :style="getLevelThumbnail(i, list)">
+                                <button id="levelThumbnailReal" @click="selected = item.originalIndex" style="background-color: rgb(255 0 0 / 0); width: 90%; margin: 0.5em;" :style="getLevelThumbnail(item.originalIndex, list)" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
                                     <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                                                                             <span class="type-label-sm">Verified by {{ level.verifier }}</span>
                                 </button>
