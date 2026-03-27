@@ -172,10 +172,10 @@ export default {
                         - The difficulty must be almost all in the spam of the level. You are allowed to put a triple spike or a timing at the end or beginning. (Under some conditions, roll/rake levels can have actual gameplay, as long as the difficult part is the roll/rake section and the real gameplay isnt overbearing, EX: Nightmare The)
                     </p>
                     <p>
-                        - You are allowed to use any methods of spamming, but levels must be beaten with the method/fps they were verified with. (240hz and CBF will be counted as the same thing)
+                        - You are allowed to use any methods of spamming, but levels must be beaten with the method/fps they were verified with. (You can use 240hz for CBF UFO levels)
                     </p>
                     <p>
-                        - A maximum of 2 inputs are allowed when spamming. Before submitting roll/rake levels/completions be sure that you do not overtap or double click, do not modify your trigger distance from the default setting for rake/roll challenges. DM a list mod for help checking your device.
+                        - A maximum of 2 inputs are allowed when spamming (Except for Cartertapping). Before submitting roll/rake levels/completions be sure that you do not overtap or double click, DM a list mod for help checking your device.
                     </p>
                     <p>
                         - Uncapped devices have a debounce delay of 10ms or less, levels also do not have a time limit, make them as short or as long as you want.
