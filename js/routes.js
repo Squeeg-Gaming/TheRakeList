@@ -5,7 +5,6 @@ import Statistics from './pages/Statistics.js';
  
 export default [
     { path: '/', component: List },
-    { path: '/levels', component: Levels },
     { path: '/leaderboard', component: Leaderboard },
     { path: '/roulette', component: Roulette },
     { path: '/statistics', component: Statistics },
