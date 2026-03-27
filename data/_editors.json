@@ -14,6 +14,11 @@
         "name": "Realtoreeeeee",
         "link": "www.youtube.com/channel/UCJ5bFvT3tFWaM_LoJdlYKAw"
     },
+        {
+        "role": "admin",
+        "name": "Delgado_Yeet_404",
+        "link": "https://www.youtube.com/@Gangsterdino716"
+    },
     {
         "role": "helper",
         "name": "BLJ_Broken",
@@ -28,11 +33,6 @@
         "role": "helper",
         "name": "Soli",
         "link": "https://www.youtube.com/@Prometheus_Alt"
-    },
-    {
-        "role": "admin",
-        "name": "Delgado_Yeet_404",
-        "link": "https://www.youtube.com/@Gangsterdino716"
     },
     {
         "role": "dev",
