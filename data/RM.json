@@ -1,6 +1,6 @@
 {
 "id": 136360466,
-"name": "Rigor Mortist",
+"name": "Rigor Mormist",
 "author": "Squeeg",
 "creators": ["Squeeg"],
 "verifier": "Squeeg",
@@ -8,9 +8,15 @@
 "percentToQualify": 100,
 "password": "Altjitter/Ludwig/CBF",
 "records": [
-    {
+        {
             "user": "Delgado_Yeet_404",
             "link": "https://youtu.be/VgOoql8J9yo",
+            "hz": 240,
+            "percent": 100
+        },
+        {
+            "user": "Squeeg",
+            "link": "https://www.youtube.com/watch?v=1d3eYceD3XY",
             "hz": 240,
             "percent": 100
         }
