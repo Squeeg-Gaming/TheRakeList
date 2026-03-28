@@ -4,15 +4,15 @@
 "author": "Squeeg",
 "creators": ["Squeeg"],
 "verifier": "Squeeg",
-"verification": "https://youtu.be/uhJRaPks59g?si=0jQqOmSmw8M0BBaB",
+"verification": "https://www.youtube.com/watch?v=1d3eYceD3XY",
 "percentToQualify": 100,
 "password": "Altjitter/Ludwig/CBF",
 "records": [
-    {
+        {
             "user": "Delgado_Yeet_404",
             "link": "https://youtu.be/VgOoql8J9yo",
             "hz": 240,
             "percent": 100
-        }
+        },
     ]
 }
