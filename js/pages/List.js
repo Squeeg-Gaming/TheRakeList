@@ -138,7 +138,18 @@ export default {
 
                     <main style="display: flex; flex-direction: column; align-items: left; gap: 24px; text-align: left; overflow: hidden; overflow-y: auto; max-height: 300px; width: 700px; border: 3px solid var(--color-primary); border-radius: 5px;">
             			<div style="display: flex; flex-direction: column; align-items: left; gap: 24px; overflow: visible; margin-left: 10px; margin-top: 12px">
-							<p class="cl">nothing here yet...</p>
+                            <h2>3/29/26</h2>
+                            <p class="cl">- <clw>Immortal</clw> has been placed at <clw>#2</clw></p>
+                            <p class="cl">- <clw>Outbreak Perfected</clw> has been placed at <clw>#1</clw></p>
+                            <p class="cl">- <clw>Electroman Spam</clw> has been placed at <clw>#240</clw></p>
+                            <p class="cl">- <clw>Watery graves</clw> has been placed at <clw>#207</clw></p>
+                            <p class="cl">- <clw>Rigor Mormist</clw> has been placed at <clw>#210</clw></p>
+                            <p class="cl">- <clw>Aj for Absoluteness</clw> has been placed at <clw>#183</clw></p>
+                            <p class="cl">- <clw>The Big Kirk</clw> has been placed at <clw>#178</clw></p>
+                            <p class="cl">- <clw>Little Girl Tutorial</clw> has been placed at <clw>#171</clw></p>
+                            <p class="cl">- <clw>Shes Perfect</clw> has been placed at <clw>#98</clw></p>
+                            <p class="cl">- <clw>Tower C</clw> has been raised from <clw>#10</clw> to <clw>#7</clw></p>
+							<p class="cl">hello changelog!</p>
 				</div>
         			</main>
                 </div>
