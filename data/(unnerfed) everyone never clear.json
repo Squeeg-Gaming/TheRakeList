@@ -8,5 +8,11 @@
     "percentToQualify": 100,
     "password": "Manual Scroll/CBF",
     "records": [
+        {
+            "user": "Delgado_Yeet_404",
+            "link": "https://youtu.be/uhJRaPks59g?si=d81g_nOGcVhdQBvN",
+            "percent": 100,
+            "hz": "CBF"
+        }
     ]
 }
