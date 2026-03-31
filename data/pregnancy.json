@@ -1,0 +1,18 @@
+{
+    "id": 116695029,
+    "name": "pregnancy",
+    "author": "aelzfr",
+    "creators": ["aelzfr"],
+    "verifier": "aelzfr",
+    "verification": "https://youtu.be/m_Fpq7l7bnY?si=oJcW_qTKTC8N-pbr",
+    "percentToQualify": 100,
+    "password": "Alternating/CBF",
+    "records": [
+        {
+            "user": "ywuChaos",
+            "link": "https://www.youtube.com/watch?v=xQNdAEod96Q",
+            "percent": 100,
+            "hz": "CBF"
+        }
+    ]
+}
