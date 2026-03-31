@@ -8,11 +8,5 @@
     "percentToQualify": 100,
     "password": "Alternating/60FPS",
     "records": [
-        {
-            "user": "BLJ_Broken",
-            "link": "https://www.youtube.com/watch?v=QfcAQJd2jvM",
-            "percent": 100,
-            "hz": 60
-        }
     ]
 }
