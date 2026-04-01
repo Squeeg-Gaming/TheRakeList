@@ -8,11 +8,5 @@
     "percentToQualify": 100,
     "password": "Manual Scroll/CBF",
     "records": [
-        {
-            "user": "Squeeg",
-            "link": "https://youtu.be/uhJRaPks59g?si=lTOBTOhvpgqTrL7w",
-            "percent": 100,
-            "hz": "CBF",
-        }
     ]
 }
