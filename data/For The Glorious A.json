@@ -3,16 +3,10 @@
     "name": "For The Glorious A",
     "author": "Liknod",
     "creators": [],
-    "verifier": "Liknod",
-    "verification": "https://youtu.be/64fhjzZyMU8?si=p880lj9Mjqqehfpk",
+    "verifier": "Squeeg",
+    "verification": "https://youtu.be/uhJRaPks59g?si=gb59IzXZpNFI4JmV"
     "percentToQualify": "100",
     "password": "Altjitter/Ludwig/CBF",
     "records": [
-        {
-            "user": "Squeeg",
-            "link": "https://youtu.be/uhJRaPks59g?si=gb59IzXZpNFI4JmV",
-            "percent": 100,
-            "hz": 240
-        }
     ]
 }
