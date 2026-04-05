@@ -8,5 +8,10 @@
     "percentToQualify": "100",
     "password": "Uncapped/CBF",
     "records": [
+        {
+            "user": "Sandwich",
+            "link": "https://youtu.be/WlrhfYZpXf0",
+            "hz": "360",
+            "percent": 100
     ]
 }
