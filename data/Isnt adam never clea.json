@@ -25,7 +25,12 @@
             "link": "https://www.youtube.com/watch?v=75mVNls-Ja0",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "G1rcy",
+            "link": "https://youtu.be/ioFULhcGl_M?is=RU_i4GZzJjyrY1IF",
+            "hz": 360,
+            "percent": 100
         }
-        
     ]
 }
