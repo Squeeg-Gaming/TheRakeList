@@ -13,6 +13,12 @@
             "link": "https://youtu.be/YNCg4a8SIFs?si=NJCMyuaeLKrOmECN",
             "percent": 100,
             "hz": 240
+        },
+                {
+            "user": "Sandwich",
+            "link": "https://youtu.be/WlrhfYZpXf0",
+            "percent": 100,
+            "hz": "360"
         }
     ]
 }
