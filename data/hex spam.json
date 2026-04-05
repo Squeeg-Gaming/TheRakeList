@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Alternating/33FPS",
     "records": [
+                {
+            "user": "Sandwich",
+            "link": "https://youtu.be/WlrhfYZpXf0",
+            "percent": 100,
+            "hz": "33"
+        }
     ]
 }
