@@ -8,6 +8,11 @@
     "percentToQualify": 100,
     "password": "Alternating/60FPS",
     "records": [
-
+{
+            "user": "shafikdabest",
+            "link": "https://youtu.be/j9QLHq18qJM?si=DJZH-zimjTTx-6-G",
+            "percent": 100,
+            "hz": "60"
+        }
     ]
 }
