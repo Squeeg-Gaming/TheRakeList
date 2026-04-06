@@ -6,13 +6,13 @@
     "verifier": "ObeyMiniNinja00",
     "verification": "https://www.youtube.com/watch?v=uhJRaPks59g",
     "percentToQualify": 100,
-    "password": "Alternating/CBF",
+    "password": "Alternating/22fps",
     "records": [
         {
             "user": "PaperGuy",
             "link": "https://youtu.be/yBJdWzdevFo?si=_Hi6YOph_PBITjYi",
             "percent": 100,
-            "hz": "CBF"
+            "hz": "22"
         }
     ]
 }
