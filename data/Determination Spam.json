@@ -8,6 +8,11 @@
     "percentToQualify": "100",
     "password": "Alternating/CBF",
     "records": [
-      
+        {
+        "user": "Kirilowplay",
+        "link": "https://youtu.be/eS9z6n9UJIc",
+        "hz": "240",
+        "percent": 100
+        }
     ]
 }
