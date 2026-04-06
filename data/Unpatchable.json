@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Alternating/60FPS",
    "records": [
+        {
+            "user": "Sandwich",
+            "link": "https://medal.tv/games/geometry-dash/clips/ms6ZtDMZ581PKRVvL?invite=cr-MSw3bmEsNDcyMzE5NTg3",
+            "percent": 100,
+            "hz": "60"
+        }
     ]
 }
