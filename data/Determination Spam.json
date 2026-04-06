@@ -3,15 +3,15 @@
     "name": "Determination Spam",
     "author": "Kirilowplay",
     "creators": ["Ternasius, Kirilowplay"],
-    "verifier": "Sandwich",
-    "verification": "https://youtu.be/VrIalil_grs",
+    "verifier": "Kirilowplay",
+    "verification": "https://youtu.be/eS9z6n9UJIc",
     "percentToQualify": "100",
     "password": "Alternating/CBF",
     "records": [
         {
-        "user": "Kirilowplay",
-        "link": "https://youtu.be/eS9z6n9UJIc",
-        "hz": "240",
+        "user": "Sandwich",
+        "link": "https://youtu.be/VrIalil_grs",
+        "hz": "360",
         "percent": 100
         }
     ]
