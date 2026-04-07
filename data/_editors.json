@@ -15,7 +15,12 @@
         "link": "https://www.youtube.com/channel/UCQUD2wonWp337xa4p-NPy0w"
     },
     {
-    "role": "admin",
+        "role": "admin",
+        "name": "AngoPR",
+        "link": "www.youtube.com/@angoPR1t"
+    },
+    {
+    "role": "helper",
         "name": "Squeeg",
         "link": "https://www.youtube.com/channel/UCCkIsVA7hh8epa3Tf4xT9GA"
     },
@@ -38,11 +43,6 @@
         "role": "helper",
         "name": "Soli",
         "link": "https://www.youtube.com/@Prometheus_Alt"
-    },
-    {
-        "role": "helper",
-        "name": "AngoPR",
-        "link": "www.youtube.com/@angoPR1t"
     },
     {
         "role": "dev",
