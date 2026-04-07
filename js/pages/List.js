@@ -73,7 +73,7 @@ export default {
                     </ul>
                     <h2>Records ({{ level.records.length }})</h2>
                     <p v-if="selected + 1 <= 200"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
-                    <p v-else-if="selected +1 <= 350"><strong>100%</strong> or better to qualify</p>
+                    <p v-else-if="selected +1 <= 500"><strong>100%</strong> or better to qualify</p>
                     <p v-else>This level does not accept new records.</p>
                     <p v-if="level.legacy">This level should be beaten with legacy hitboxes</p>
                     <p v-else-if="level.legacy == false">This level must be beaten using the new hitboxes</p>
