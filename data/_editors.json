@@ -1,6 +1,16 @@
 [
     {
         "role": "owner",
+        "name": "Squeeg",
+        "link": "https://www.youtube.com/channel/UCCkIsVA7hh8epa3Tf4xT9GA"
+    },
+    {
+        "role": "owner",
+        "name": "BLJ_Broken",
+        "link": "https://www.youtube.com/@BLJBroken/"
+    },
+    {
+        "role": "admin",
         "name": "Delgado_Yeet_404",
         "link": "https://www.youtube.com/@Gangsterdino716"
     },
@@ -16,23 +26,23 @@
     },
     {
         "role": "admin",
-        "name": "AngoPR",
-        "link": "www.youtube.com/@angoPR1t"
+        "name": "Shafik",
+        "link": "https://www.youtube.com/channel/UCQUD2wonWp337xa4p-NPy0w"
     },
     {
-    "role": "helper",
-        "name": "Squeeg",
-        "link": "https://www.youtube.com/channel/UCCkIsVA7hh8epa3Tf4xT9GA"
+        "role": "admin",
+        "name": "Dan",
+        "link": "https://www.youtube.com/channel/UC_uh6qZuEm0WEFe61X-IdDA"
+    },
+    {
+        "role": "admin",
+        "name": "AngoPR",
+        "link": "www.youtube.com/@angoPR1t"
     },
     {
         "role": "helper",
         "name": "Realtoreeeeee",
         "link": "www.youtube.com/channel/UCJ5bFvT3tFWaM_LoJdlYKAw"
-    },
-    {
-        "role": "helper",
-        "name": "BLJ_Broken",
-        "link": "https://www.youtube.com/@BLJBroken/"
     },
     {
         "role": "helper",
