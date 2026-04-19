@@ -1,0 +1,18 @@
+{
+    "id": 137500699,
+    "name": "EllyNeverClear",
+    "author": "Darknessfr",
+    "creators": ["Darknessfr"],
+    "verifier": "Darknessfr",
+    "verification": "https://youtu.be/DhBm0N3mVxo?si=xI86D8NNl7T2mjqA",
+    "percentToQualify": "100",
+    "password": "Alternating/cbf",
+   "records": [
+        {
+        "user": "Sandwich",
+        "link": "https://youtu.be/reZXTvozlmo",
+        "hz": "CBF",
+        "percent": 100
+        }
+    ]
+}

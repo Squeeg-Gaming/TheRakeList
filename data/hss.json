@@ -1,0 +1,24 @@
+{
+    "id": 124800714,
+    "name": "Half second spam",
+    "author": "Angopr",
+    "creators": ["Angopr,Nucleus"],
+    "verifier": "AngoPR",
+    "verification": "https://youtu.be/fWzScFcKZ_U?si=nFmoU8vQGSXJD7B-",
+    "percentToQualify": "100",
+    "password": "Alternating/60FPS",
+   "records": [
+        {
+            "user": "smelly bandi",
+            "link": "https://youtu.be/SNV1NBr44zo",
+            "hz": "60",
+            "percent": 100
+        },
+        {
+            "user": "Sandwich",
+            "link": "https://medal.tv/games/geometry-dash/clips/msRsclIYMWtbIRYk_?invite=cr-MSx2NmcsNDcyMzE5NTg3",
+            "hz": "60",
+            "percent": 100
+        }
+    ]
+}

@@ -9,6 +9,12 @@
     "password": "Alternating/60FPS",
     "records": [
         {
+            "user": "ywuChaos",
+            "link": "https://youtu.be/mBZodbs4M9M",
+            "percent": 100,
+            "hz": 60
+        },
+        {
             "user": "Squeeg",
             "link": "https://www.youtube.com/watch?v=M8zfyTPHazI",
             "percent": 100,

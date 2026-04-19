@@ -1,12 +1,24 @@
 {
     "id": 63335497,
-    "name": "nintenfox cant beat (K55)",
+    "name": "nintenfox cant beat",
     "author": "Needless",
     "creators": [],
     "verifier": "Sum",
     "verification": "https://www.youtube.com/watch?v=F9AS44IIYNY",
     "percentToQualify": "100",
-    "password": "K55/300FPS",
+    "password": "Alternating/CBF",
     "records": [
+        {
+            "user": "Sandwich",
+            "link": "https://youtu.be/WlrhfYZpXf0",
+            "hz": "360",
+            "percent": 100
+        },
+        {
+            "user": "smelly bandi",
+            "link": "https://www.youtube.com/watch?v=kewpgmC59jU",
+            "percent": 100,
+            "hz": "240"
+        }        
     ]
 }

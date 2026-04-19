@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Alternating/60FPS",
     "records": [
+                {
+            "user": "ywuChaos",
+            "link": "https://youtu.be/mBZodbs4M9M",
+            "percent": 100,
+            "hz": 60
+        }
     ]
 }

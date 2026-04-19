@@ -8,5 +8,17 @@
     "percentToQualify": 100,
     "password": "Alternating/60FPS",
     "records": [
+        {
+            "user": "Sandwich",
+            "link": "https://youtu.be/WlrhfYZpXf0",
+            "percent": 100,
+            "hz": "60"
+        },
+        {
+            "user": "smelly bandi",
+            "link": "https://youtu.be/SNV1NBr44zo",
+            "hz": "60",
+            "percent": 100
+        }
     ]
 }

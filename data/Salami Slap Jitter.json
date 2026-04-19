@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Jitter/60FPS",
     "records": [
+                                                                              {
+        "user": "Soli",
+        "link": "https://youtu.be/PeDSZ_RG7gA",
+        "hz": "60",
+        "percent": 100
+        }
     ]
 }

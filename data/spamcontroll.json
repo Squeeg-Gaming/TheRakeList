@@ -1,0 +1,36 @@
+{
+    "id": 132181581,
+    "name": "spam control",
+    "author": "Darknessfr",
+    "creators": ["Darknessfr"],
+    "verifier": "Darknessfr",
+    "verification": "https://youtu.be/PmIam-bfpz0?si=QL0BqF0TSQ5UrhoQ",
+    "percentToQualify": "100",
+    "password": "Alternating/cbf",
+   "records": [
+                                             {
+            "user": "AngoPR",
+            "link": "https://youtu.be/MjpfsNwsaXM?si=onG5LuustO-B-HQx",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+        "user": "Sandwich",
+        "link": "https://youtu.be/reZXTvozlmo",
+        "hz": "CBF",
+        "percent": 100
+        },
+        {
+        "user": "smelly bandi",
+        "link": "https://youtu.be/SNV1NBr44zo",
+        "hz": "60",
+        "percent": 100
+        },
+       {
+        "user": "Delgado_Yeet_404",
+        "link": "https://youtu.be/o_RBoiHkpMc?si=YG2skpQJNLBhcTCR",
+        "hz": "240",
+        "percent": 100
+        }
+    ]
+}

@@ -3,12 +3,24 @@
     "name": "I AM SPAM",
     "author": "aelzfr",
     "creators": ["aelzfr"],
-    "verifier": "Paperguy",
+    "verifier": "ywuChaos",
     "verification": "https://www.youtube.com/watch?v=c_0KDoUWsvc&embeds_referring_euri=https%3A%2F%2Fspamchallenge.pages.dev%2F",
     "percentToQualify": 100,
     "password": "Alternating/60FPS",
     "records": [
-        {
+                {
+            "user": "PaperGuy",
+            "link": "https://www.youtube.com/watch?v=41at57mCsDc",
+            "percent": 100,
+            "hz": 60
+        },
+                        {
+            "user": "loooookkk",
+            "link": "https://youtu.be/-m8VcZnAdzc?si=n2Ds-MQJbkLvsB3A&t=207",
+            "percent": 100,
+            "hz": 60
+        },
+                        {
             "user": "BLJ_Broken",
             "link": "https://www.youtube.com/watch?v=QfcAQJd2jvM",
             "percent": 100,

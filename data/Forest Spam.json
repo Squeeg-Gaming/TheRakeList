@@ -1,0 +1,18 @@
+{
+    "id": 67700737,
+    "name": "Forest Spam",
+    "author": "pixelfactorial",
+    "creators": [],
+    "verifier": "pixelfactorial",
+    "verification": "https://youtu.be/a71WQsyDdVA",
+    "percentToQualify": "100",
+    "password": "Alternating/CBF",
+    "records": [
+        {
+        "user": "Sandwich",
+        "link": "https://youtu.be/reZXTvozlmo",
+        "hz": "CBF",
+        "percent": 100
+        }
+    ]
+}

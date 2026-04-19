@@ -1,0 +1,18 @@
+{
+    "id": 133337214,
+    "name": "Scrolly Clicky",
+    "author": "Carter Traywick",
+    "creators": ["Carter Traywick"],
+    "verifier": "Carter Traywick",
+    "verification": "https://youtu.be/YoLOcdzZFgo?si=mO66zpQ_LkwW6a1d",
+    "percentToQualify": 100,
+    "password": "Geode Scroll/240FPS",
+    "records": [
+        {
+        "user": "Sandwich",
+        "link": "https://youtu.be/0Xgfxns4vmc",
+        "hz": "240",
+        "percent": 100
+        }
+    ]
+}

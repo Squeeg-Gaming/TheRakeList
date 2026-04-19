@@ -1,0 +1,30 @@
+{
+    "id": 128613232,
+    "name": "Wotm rt version",
+    "author": "Angopr",
+    "creators": ["Squeeg,Angopr"],
+    "verifier": "AngoPR",
+    "verification": "https://youtu.be/UtvwwIVK1yg?si=7zMXfWyrDIKGEBvp",
+    "percentToQualify": 100,
+    "password": "Rake/CBF",
+    "records": [
+                {
+            "user": "0rkyn",
+            "link": "https://medal.tv/games/geometry-dash/clips/mstcYdjQ5vN0Ugnhf?invite=cr-MSw4cjgsNTcxMTM1ODk0&v=24",
+            "percent": 100,
+            "hz": 240
+        },
+                        {
+            "user": "G1rcy",
+            "link": "https://youtu.be/FCaVhxVOZ2c",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+        "user": "Sandwich",
+        "link": "https://youtu.be/reZXTvozlmo",
+        "hz": "CBF",
+        "percent": 100
+        }
+    ]
+}

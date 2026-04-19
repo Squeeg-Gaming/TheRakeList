@@ -1,0 +1,18 @@
+{
+    "id": 111882540,
+    "name": "Determination Spam",
+    "author": "Kirilowplay",
+    "creators": ["Ternasius, Kirilowplay"],
+    "verifier": "Kirilowplay",
+    "verification": "https://youtu.be/eS9z6n9UJIc",
+    "percentToQualify": "100",
+    "password": "Alternating/CBF",
+    "records": [
+        {
+        "user": "Sandwich",
+        "link": "https://youtu.be/VrIalil_grs",
+        "hz": "360",
+        "percent": 100
+        }
+    ]
+}

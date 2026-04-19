@@ -1,0 +1,18 @@
+{
+    "id": 123346980,
+    "name": "Garbanzo but sakupen",
+    "author": "Angopr",
+    "creators": ["Angopr"],
+    "verifier": "AngoPR",
+    "verification": "https://youtu.be/EXHw6OlhVvU?si=EnfnWAWpBb7OeI8P",
+    "percentToQualify": "100",
+    "password": "Alternating/CBF",
+   "records": [
+        {
+        "user": "Sandwich",
+        "link": "https://youtu.be/reZXTvozlmo",
+        "hz": "CBF",
+        "percent": 100
+        }
+    ]
+}

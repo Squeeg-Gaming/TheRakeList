@@ -1,0 +1,18 @@
+{
+    "id": 126841396,
+    "name": "1 second spam",
+    "author": "Angopr",
+    "creators": ["Angopr,Nucleus"],
+    "verifier": "AngoPR",
+    "verification": "https://youtu.be/fWzScFcKZ_U?si=nFmoU8vQGSXJD7B-",
+    "percentToQualify": "100",
+    "password": "Alternating/60FPS",
+   "records": [
+        {
+        "user": "Sandwich",
+        "link": "https://youtu.be/reZXTvozlmo",
+        "hz": "CBF",
+        "percent": 100
+        }
+    ]
+}

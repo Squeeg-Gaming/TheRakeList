@@ -8,5 +8,17 @@
     "percentToQualify": "100",
     "password": "Rake/CBF/No RT",
     "records": [
+                                        {
+            "user": "G1rcy",
+            "link": "https://www.youtube.com/watch?v=JnXzG2JxM7U",
+            "percent": 100,
+            "hz": 240
+        },
+{
+            "user": "Fafa",
+            "link": "https://youtu.be/C8t5LTL_BV8",
+            "percent": 100,
+            "hz": 280
+        }
     ]
 }

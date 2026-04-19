@@ -1,0 +1,36 @@
+{
+    "id": 97977886,
+    "name": "2 2 Spam",
+    "author": "DelgadoYeet404",
+    "creators": ["DelgadoYeet404"],
+    "verifier": "Delgado_yeet_404",
+    "verification": "https://youtu.be/E_hVSA1r7y0",
+    "percentToQualify": "100",
+    "password": "Jitter/CBF",
+    "records": [
+        {
+            "user": "shafikdabest",
+            "link": "https://youtu.be/krxcz1yjjJk?si=TtrQHEVCD971MaLU",
+            "percent": 100,
+            "hz": "60"
+        },
+                {
+            "user": "AngoPR",
+            "link": "https://youtu.be/JsFIlp3kGqQ?si=3D-E7yG3wLaGtiQK",
+            "percent": 100,
+            "hz": "cbf"
+        },
+        {
+            "user": "Sandwich",
+            "link": "https://youtu.be/WlrhfYZpXf0",
+            "percent": 100,
+            "hz": "360"
+        },
+        {
+            "user": "G1rcy",
+            "link": "https://youtu.be/ioFULhcGl_M?is=RU_i4GZzJjyrY1IF",
+            "hz": 240,
+            "percent": 100
+        }
+    ]
+}

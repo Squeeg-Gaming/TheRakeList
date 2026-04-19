@@ -1,0 +1,30 @@
+{
+    "id": 94046169,
+    "name": "free for the mozy",
+    "author": "JeDoesStuff",
+    "creators": ["JeDoesStuff"],
+    "verifier": "JeDoesStuff",
+    "verification": "https://www.youtube.com/watch?v=AX42xh0wTEc",
+    "percentToQualify": "100",
+    "password": "Alternating/Altjitter/Ludwig/CBF",
+    "records": [
+        {
+            "user": "G1rcy",
+            "link": "https://youtu.be/_tbU-M-ko70?si=4W8fCyM1l035NyHo",
+            "hz": 360,
+            "percent": 100
+        },
+        {
+            "user": "shafikdabest",
+            "link": "https://youtu.be/zkbZMbcQ3I8?si=tOEPSR0ZXJfyrsmf",
+            "percent": 100,
+            "hz": "60"
+        },
+        {
+            "user": "Sandwich",
+            "link": "https://youtu.be/WlrhfYZpXf0",
+            "percent": 100,
+            "hz": "360"
+        }
+    ]
+}
