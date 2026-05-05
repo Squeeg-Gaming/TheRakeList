@@ -1,0 +1,24 @@
+{
+    "id": 131431573,
+    "name": "Bugatti Tutorial",
+    "author": "Shayplaz",
+    "creators": ["Shayplaz"],
+    "verifier": "Delgado_Yeet_404",
+    "verification": "https://youtu.be/tLySS5dhDDs",
+    "percentToQualify": "100",
+    "password": "AltJItter/Ludwig/CBF",
+    "records": [
+                    {
+            "user": "shafikdabest",
+            "link": "https://youtu.be/YYuGwbL3jWU",
+            "hz": 360,
+            "percent": 100
+        },
+                {
+            "user": "G1rcy",
+            "link": "https://youtu.be/ioFULhcGl_M?is=RU_i4GZzJjyrY1IF",
+            "hz": 360,
+            "percent": 100
+        }
+    ]
+}

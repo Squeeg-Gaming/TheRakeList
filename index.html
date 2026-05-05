@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=1024" />
-        <meta proprety="og:url" content="https://therakelist.pages.dev/"/>
-        <meta property="og:title" content="Spam Challenge List [GWA]" />
-        <meta property="og:description" content="This is a website for the hardest spam challenges in Geometry Dash!" />
-        <meta property="og:image" content="https://therakelist.pages.dev/assets/the%20sclgwa%20logo.png" />
-        <title>Spam Challenge List [GWA]</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=1024">
+        <meta name="title" content="SGD Level List">
+        <meta proprety="og:url" content="https://sgdlist.rf.gd/">
+        <meta property="og:title" content="SGD Level List">
+        <meta property="og:description" content="This is a website for the hardest Scratch Geometry Dash levels verified on video!">
+        <meta name="keywords" content="scratch, geometry dash, wiki, ddl, yes i am stealing all the tags, demonlist, dao, sgd, scratch tidal wave, zoink, top 1, scratch top 1, squeeg, um yea, we need views somehow, if you are reading this, ballgoballing, was responsible for this, um yea, views, geometry dash, gd, level, levels, demon, hardest, levels, video, list">
+        <meta property="og:image" content="https://sgdlist.rf.gd/list_icon.png">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#000000">
+        <meta http-equiv="Refresh" content="0;url=http://sgdlist.pages.dev">
+        <title>SGD Level List</title>
 
         <!-- Replace your server icon by uploading an image file named "list_icon.png"-->
-        <link rel="icon" href="/assets/the sclgwa logo.png" />
+        <link rel="icon" href="/list_icon.png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -24,6 +29,7 @@
             href="/css/pages/leaderboard.css"
         />
         <link rel="stylesheet" type="text/css" href="/css/pages/roulette.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/changelog.css" />
         <link rel="stylesheet" type="text/css" href="/css/components/nav.css" />
         <link rel="stylesheet" type="text/css" href="/css/components/btn.css" />
         <link
@@ -34,52 +40,17 @@
         <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.js"></script>
         <script src="https://unpkg.com/vue-router@4.0.14/dist/vue-router.global.prod.js"></script>
         <script type="module" src="/js/main.js"></script>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"
+        />     
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+        </script>
     </head>
     <body id="app">
-        <header :class="{ dark: store.dark, 'darker': store.darker }">
-            <div class="logo" style="display: flex; align-items: center; gap: 10px;">
-                <a href="https://therakelist.pages.dev/">
-                <img src="./assets/the sclgwa logo.png" style="height: 50px; border-radius: 10%;" href="https://therakelist.pages.dev/" target="_blank"/>
-                </a>
-                <h2>SCL</h2>
-                <p style="margin-top: 15px;">v2.0.0</p>
-            </div>
-            <nav class="nav">
-                <router-link class="nav__tab" to="/">
-                    <span class="type-label-lg">List</span>
-                </router-link>
-                <router-link class="nav__tab" to="/leaderboard">
-                    <span class="type-label-lg">Leaderboard</span>
-                </router-link>
-                <router-link class="nav__tab" to="/roulette">
-                    <span class="type-label-lg">Roulette</span>
-                </router-link>
-                <div class="nav__actions">
-                    <button
-                        class="nav__icon"
-                        @click.prevent="store.toggleDark()"
-                    >
-                        <img
-                            :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'"
-                            alt=""
-							style="filter: var(--the-button-on-top)"
-                        />
-                    </button>
-                    <!-- Replace the '#' with your discord server's invite-->
-                    <a class="nav__icon" href="https://discord.gg/d47pcnV7Fg">
-                        <img src="/assets/discord.svg" alt="Discord Logo" />
-                    </a>
-                    <!-- List record submission form, add a link to replace the '#' when putting a link to your list submission form-->
-                    <a
-                        class="nav__cta type-label-lg"
-                        href="https://discord.gg/d47pcnV7Fg"
-                        target="_blank"
-                        style="white-space: nowrap;"
-                        >Submit Record</a
-                    >
-                </div>
-            </nav>
-        </header>
-        <router-view :class="{ dark: store.dark, 'darker': store.darker }"></router-view>
+		<div style="display: flex; flex-direction: column; align-items: left; gap: 24px; margin-left: 100px; overflow: visible; margin-top: 100px;">
+        <h1 style="text-align: center;">The list is now on <b><a href="https://thenewrakelist.squeeg-squeeg.workers.dev/">thenewrakelist.squeeg-squeeg.workers.dev</a></b>. You should be automatically redirected to it.</h1>
+        </div>
     </body>
 </html>

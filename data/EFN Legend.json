@@ -8,34 +8,5 @@
     "percentToQualify": "100",
     "password": "Alternating/CBF",
     "records": [
-        {
-        "user": "ywuChaos",
-        "link": "https://www.youtube.com/watch?v=sYlM-U2RWxw",
-        "hz": "CBF",
-        "percent": 100
-        },
-        {
-        "user": "galbeni7",
-        "hz": "CBF",
-        "percent": 100
-        },
-        {
-        "user": "PaperGuy",
-        "link": "https://youtu.be/rWf0lI6zy1E",
-        "hz": "CBF",
-        "percent": 100
-        },
-        {
-            "user": "loooookkk",
-            "link": "https://www.youtube.com/watch?v=2vrtxzz3cfM",
-            "hz": "CBF",
-            "percent": 100
-        },
-        {
-            "user": "ad3usgmd",
-            "link": "https://www.youtube.com/watch?v=R6IrG5UBLeU",
-            "hz": "CBF",
-            "percent": 100
-        }
     ]
 }

@@ -1,0 +1,83 @@
+{
+    "id": 135280953,
+    "name": "Alex spam",
+    "author": "alex",
+    "creators": ["Alex"],
+    "verifier": "Alex",
+    "verification": "https://youtu.be/yoC0M1x9j54?si=uAWcDaVkqz-3UwN8",
+    "percentToQualify": 100,
+    "password": "Alternating/Any fps",
+    "records": [
+        {
+        "user": "Delgado_Yeet_404",
+        "link": "https://youtu.be/H-QHACcM-0Y",
+        "hz": "CBF",
+        "percent": 100
+        },
+                {
+        "user": "Squeeg",
+        "link": "https://www.youtube.com/watch?v=1d3eYceD3XY",
+        "hz": "CBF",
+        "percent": 100
+        },
+                                                                {
+        "user": "0rkyn",
+        "link": "https://medal.tv/games/geometry-dash/clips/mrcOLMDawkT1PgGMu?invite=cr-MSxSSjUsNTcxMTM1ODk0&v=6",
+        "hz": "CBF",
+        "percent": 100
+        },
+                                                                        {
+        "user": "YB_Batman",
+        "link": "https://medal.tv/games/geometry-dash/clips/mp7g5b7zG_R8BNbgL?invite=cr-MSxXbk4sNTE1NzQ5NDM1",
+        "hz": "CBF",
+        "percent": 100
+        },
+                       	                {
+            "user": "Cyber<3<3",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "shafikdabest",
+            "link": "https://youtu.be/krxcz1yjjJk?si=TtrQHEVCD971MaLU",
+            "percent": 100,
+            "hz": "60"
+        },
+        {
+            "user": "Sandwich",
+            "link": "https://medal.tv/games/geometry-dash/clips/mp5CWjwxPVRpzQNwI?invite=cr-MSw4aWIsNDcyMzE5NTg3",
+            "percent": 100,
+            "hz": "240"
+        },
+        {
+            "user": "G1rcy",
+            "link": "https://youtu.be/ioFULhcGl_M?is=RU_i4GZzJjyrY1IF",
+            "hz": 240,
+            "percent": 100
+        },
+                                {
+            "user": "AngoPR",
+            "link": "https://youtu.be/GyZ5rsLfFTc?si=NNKI74Xcups3RB1z",
+            "percent": 100,
+            "hz": "cbf"
+        },
+        {
+            "user": "willou",
+            "link": "https://www.youtube.com/watch?v=_Hyy46KfOU0",
+            "hz": 240,
+            "percent": 100
+        },
+        {
+            "user": "nxtjaxx",
+            "link": "https://m.youtube.com/watch?v=rHAlvaqfA-s&pp=0gcJCdkKAYcqIYzv",
+            "hz": 240,
+            "percent": 100
+        },
+        {
+            "user": "smelly bandi",
+            "link": "https://youtu.be/SNV1NBr44zo",
+            "hz": "60",
+            "percent": 100
+        }
+    ]
+}

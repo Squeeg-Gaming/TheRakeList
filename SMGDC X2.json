@@ -1,0 +1,18 @@
+{
+    "id": 135493654,
+    "name": "Shitty Mirror GD challenge x2",
+    "author": "AngoPR",
+    "creators": ["Noxces OG, AngoPR"],
+    "verifier": "AngoPR",
+    "verification": "https://youtu.be/92SnD3HWn8U?si=Jch8mPkRNkV6mpp4",
+    "percentToQualify": 100,
+    "password": "Altjitter/Alternating/CBF",
+    "records": [
+        {
+            "user": "Delgado_Yeet_404",
+            "link": "https://youtu.be/YNCg4a8SIFs?si=NJCMyuaeLKrOmECN",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}

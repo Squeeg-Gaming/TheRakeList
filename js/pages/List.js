@@ -28,7 +28,7 @@ export default {
                 <table class="list" v-if="list && list.length">
                     <tr v-for="(item, i) in filteredListDisplay" :key="item.originalIndex">
                                 <td class="rank">
-                                    <p v-if="item.originalIndex + 1 <= 350" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
+                                    <p v-if="item.originalIndex + 1 <= 500" class="type-label-lg">#{{ item.originalIndex + 1 }}</p>
                                     <p v-else class="type-label-lg">Legacy</p>
                                 </td>
                                 <td class="level" :class="{ 'active': selected === item.originalIndex, 'error': !item.level }">
@@ -73,7 +73,7 @@ export default {
                     </ul>
                     <h2>Records ({{ level.records.length }})</h2>
                     <p v-if="selected + 1 <= 200"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
-                    <p v-else-if="selected +1 <= 350"><strong>100%</strong> or better to qualify</p>
+                    <p v-else-if="selected +1 <= 500"><strong>100%</strong> or better to qualify</p>
                     <p v-else>This level does not accept new records.</p>
                     <p v-if="level.legacy">This level should be beaten with legacy hitboxes</p>
                     <p v-else-if="level.legacy == false">This level must be beaten using the new hitboxes</p>
@@ -138,7 +138,18 @@ export default {
 
                     <main style="display: flex; flex-direction: column; align-items: left; gap: 24px; text-align: left; overflow: hidden; overflow-y: auto; max-height: 300px; width: 700px; border: 3px solid var(--color-primary); border-radius: 5px;">
             			<div style="display: flex; flex-direction: column; align-items: left; gap: 24px; overflow: visible; margin-left: 10px; margin-top: 12px">
-							<p class="cl">nothing here yet...</p>
+                            <h2>3/29/26</h2>
+                            <p class="cl">- <clw>Immortal</clw> has been placed at <clw>#2</clw></p>
+                            <p class="cl">- <clw>Outbreak Perfected</clw> has been placed at <clw>#1</clw></p>
+                            <p class="cl">- <clw>Electroman Spam</clw> has been placed at <clw>#240</clw></p>
+                            <p class="cl">- <clw>Watery graves</clw> has been placed at <clw>#207</clw></p>
+                            <p class="cl">- <clw>Rigor Mormist</clw> has been placed at <clw>#210</clw></p>
+                            <p class="cl">- <clw>Aj for Absoluteness</clw> has been placed at <clw>#183</clw></p>
+                            <p class="cl">- <clw>The Big Kirk</clw> has been placed at <clw>#178</clw></p>
+                            <p class="cl">- <clw>Little Girl Tutorial</clw> has been placed at <clw>#171</clw></p>
+                            <p class="cl">- <clw>Shes Perfect</clw> has been placed at <clw>#98</clw></p>
+                            <p class="cl">- <clw>Tower C</clw> has been raised from <clw>#10</clw> to <clw>#7</clw></p>
+							<p class="cl">hello changelog!</p>
 				</div>
         			</main>
                 </div>

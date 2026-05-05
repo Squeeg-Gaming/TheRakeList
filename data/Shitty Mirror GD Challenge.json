@@ -1,0 +1,24 @@
+{
+    "id": 132443092,
+    "name": "Shitty Mirror GD challenge",
+    "author": "Noxces OG",
+    "creators": ["Noxces OG"],
+    "verifier": "Noxces OG",
+    "verification": "https://youtu.be/Ihf9_zvLL6g?si=Bit5g2xsX4JHA8GU",
+    "percentToQualify": 100,
+    "password": "Altjitter/Ludwig/CBF",
+    "records": [
+        {
+            "user": "Delgado_Yeet_404",
+            "link": "https://youtu.be/YNCg4a8SIFs?si=NJCMyuaeLKrOmECN",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "G1rcy",
+            "link": "https://youtu.be/ioFULhcGl_M?is=RU_i4GZzJjyrY1IF",
+            "hz": 360,
+            "percent": 100
+        }
+    ]
+}

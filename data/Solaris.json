@@ -1,0 +1,18 @@
+{
+    "id": 136702295,
+    "name": "Solaris",
+    "author": "Sandwich",
+    "creators": ["Sandwich"],
+    "verifier": "Sandwich",
+    "verification": "https://youtu.be/5iPX83S-Zmg?si=6qOMW0P_DRXN-RYN",
+    "percentToQualify": "100",
+    "password": "Alternating/CBF",
+    "records": [
+        {
+            "user": "shafikdabest",
+            "link": "https://youtu.be/krxcz1yjjJk?si=TtrQHEVCD971MaLU",
+            "percent": 100,
+            "hz": "60"
+        }
+    ]
+}

@@ -14,11 +14,25 @@
             "hz": "CBF",
             "percent": 100
         },
+       
         {
             "user": "JustAnUnknown",
             "link": "https://youtu.be/OFiefWwceHA?si=eCCpOC__GYAcByHD&t=37",
             "hz": "CBF",
             "percent": 100
+        },
+        
+        {
+            "user": "Xed",
+            "link": "https://www.youtube.com/shorts/TMIIJk6y4C8",
+            "hz": "CBF",
+            "percent": 100
+        },
+        {
+        "user": "G1rcy",
+        "link": "https://www.youtube.com/watch?v=5nxH8XnqkrA",
+        "hz": "CBF",
+        "percent": 100
         }
     ]
 }

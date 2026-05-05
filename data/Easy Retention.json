@@ -1,0 +1,18 @@
+{
+    "id": 64943165,
+    "name": "Easy retention spam",
+    "author": "Needless",
+    "creators": ["Needless, knali2001"],
+    "verifier": "JoinMolten",
+    "verification": "https://youtu.be/6UM9FOkqjy4",
+    "percentToQualify": "100",
+    "password": "Alternating/CBF",
+    "records": [
+        {
+        "user": "Sandwich",
+        "link": "https://youtu.be/reZXTvozlmo",
+        "hz": "CBF",
+        "percent": 100
+        }
+    ]
+}

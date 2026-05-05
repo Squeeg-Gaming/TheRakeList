@@ -1,0 +1,36 @@
+{
+    "id": 69461445,
+    "name": "Unpatchable",
+    "author": "9tn",
+    "creators": [],
+    "verifier": "9tn",
+    "verification": "https://youtu.be/uhJRaPks59g",
+    "percentToQualify": "100",
+    "password": "Alternating/60FPS",
+   "records": [
+        {
+            "user": "Sandwich",
+            "link": "https://medal.tv/games/geometry-dash/clips/ms6ZtDMZ581PKRVvL?invite=cr-MSw3bmEsNDcyMzE5NTg3",
+            "percent": 100,
+            "hz": "60"
+        },
+        {
+            "user": "AngoPR",
+            "link": "https://youtu.be/F6ASgX5RNXs",
+            "percent": 100,
+            "hz": "60"
+        },
+      	        {
+            "user": "Ray-3rd",
+            "link": "https://youtu.be/Fjci76jnKe4?si=uRNloQYr0UzsIgUW",
+            "percent": 100,
+            "hz": "60"
+        },
+        {
+        "user": "smelly bandi",
+        "link": "https://youtu.be/SNV1NBr44zo",
+        "hz": "60",
+        "percent": 100
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "id": 125410289,
+    "name": "Six Sevent",
+    "author": "Squeeg",
+    "creators": ["Squeeg"],
+    "verifier": "Squeeg",
+    "verification": "http://www.youtube.com/watch?v=syXLfE9D4cg",
+    "percentToQualify": 100,
+    "password": "Alternating/CBF",
+    "records": [
+        {
+        "user": "Sandwich",
+        "link": "https://youtu.be/reZXTvozlmo",
+        "hz": "CBF",
+        "percent": 100
+        },
+    {
+        "user": "Delgado_Yeet_404",
+        "link": "https://youtu.be/Oum15gTIAx0",
+        "hz": "CBF",
+        "percent": 100
+        }
+    ]
+}

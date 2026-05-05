@@ -1,0 +1,24 @@
+{
+    "id": 128723870,
+    "name": "Wrath of the 60fps",
+    "author": "Squeeg",
+    "creators": ["Squeeg,Angopr"],
+    "verifier": "AngoPR",
+    "verification": "https://youtu.be/lBgUfY4Q50g?si=MVXGga_fzqUHya_6",
+    "percentToQualify": 100,
+    "password": "Rake/60fps/No RT",
+    "records": [
+        {
+            "user": "G1rcy",
+            "link": "https://youtu.be/FCaVhxVOZ2c",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+        "user": "Sandwich",
+        "link": "https://youtu.be/reZXTvozlmo",
+        "hz": "CBF",
+        "percent": 100
+        }
+    ]
+}
